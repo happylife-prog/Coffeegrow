@@ -1,0 +1,11 @@
+html {
+    /* font-family: 'Dancing Script',cursive; */
+    font-family: 'Noto Sans JP',sans-serif;
+    /* font-family: 'Poppins',sans-serif; */
+}   
+
+.container {
+    width: 90%;
+    max-width: 1120px;
+    background-color: aqua;
+}

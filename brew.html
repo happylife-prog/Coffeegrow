@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コーヒーの淹れ方完全ガイド — ハンドドリップからエスプレッソまで | Coffee grow</title>
+    <meta name="description" content="ハンドドリップ・フレンチプレス・サイフォン・コールドブリュー・エスプレッソ・モカポット。6種の抽出方法を器具・手順・コツまで徹底解説。自分に合った淹れ方が見つかるスペシャルティコーヒーガイド。">
+    <meta name="keywords" content="コーヒー淹れ方,ハンドドリップ,フレンチプレス,サイフォン,コールドブリュー,エスプレッソ,モカポット,抽出方法,コーヒーガイド">
+    <meta name="author" content="Coffee grow">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0c0805">
+    <link rel="canonical" href="https://coffee-grow.jp/brew.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="コーヒーの淹れ方完全ガイド — ハンドドリップからエスプレッソまで | Coffee grow">
+    <meta property="og:description" content="ハンドドリップ・フレンチプレス・サイフォン・コールドブリュー・エスプレッソ・モカポット。6種の抽出方法を器具・手順・コツまで徹底解説。">
+    <meta property="og:url" content="https://coffee-grow.jp/brew.html">
+    <meta property="og:site_name" content="Coffee grow">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&q=80">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="article:published_time" content="2026-05-07T00:00:00+09:00">
+    <meta property="article:modified_time" content="2026-05-07T00:00:00+09:00">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="コーヒーの淹れ方完全ガイド | Coffee grow">
+    <meta name="twitter:description" content="6種の抽出方法を器具・手順・コツまで徹底解説。自分に合った淹れ方が見つかるスペシャルティコーヒーガイド。">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&q=80">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "コーヒーの淹れ方完全ガイド — ハンドドリップからエスプレッソまで",
+      "description": "ハンドドリップ・フレンチプレス・サイフォン・コールドブリュー・エスプレッソ・モカポット。6種の抽出方法を器具・手順・コツまで徹底解説。",
+      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&q=80",
+      "author": {
+        "@type": "Organization",
+        "name": "Coffee grow",
+        "url": "https://coffee-grow.jp"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Coffee grow",
+        "url": "https://coffee-grow.jp"
+      },
+      "datePublished": "2026-05-07T00:00:00+09:00",
+      "dateModified": "2026-05-07T00:00:00+09:00",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://coffee-grow.jp/brew.html"
+      },
+      "about": [
+        {"@type": "Thing", "name": "ハンドドリップ"},
+        {"@type": "Thing", "name": "フレンチプレス"},
+        {"@type": "Thing", "name": "サイフォン"},
+        {"@type": "Thing", "name": "コールドブリュー"},
+        {"@type": "Thing", "name": "エスプレッソ"},
+        {"@type": "Thing", "name": "モカポット"}
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+    /* ══ RESET & TOKENS ══ */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{
+        --bg1:#0c0805;--bg2:#130e08;--bg3:#1c150c;--card:#221910;
+        --accent:#c46a1e;--gold:#d9924a;--gold2:#f0b96a;
+        --cream:#f5ece0;--muted:rgba(245,236,224,.55);
+        --border:rgba(245,236,224,.08);
+        --ease:cubic-bezier(.22,1,.36,1);--t:.5s;
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'Noto Sans JP',sans-serif;background:var(--bg1);color:var(--cream);line-height:1.7;overflow-x:hidden;}
+    a{text-decoration:none;color:inherit;}
+    img{display:block;max-width:100%;}
+
+    /* ══ SCROLL REVEAL ══ */
+    .sr{opacity:0;transform:translateY(48px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+    .sr.in{opacity:1;transform:none;}
+    .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+    .d4{transition-delay:.32s}.d5{transition-delay:.40s}.d6{transition-delay:.48s}
+
+    /* ══ HEADER ══ */
+    .site-header{position:sticky;top:0;z-index:200;background:rgba(12,8,5,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:box-shadow .3s;}
+    .site-header.scrolled{box-shadow:0 4px 32px rgba(0,0,0,.5);}
+    .header-wrap{max-width:1240px;margin:0 auto;padding:20px 48px;display:flex;align-items:center;justify-content:space-between;}
+    .site-logo{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;letter-spacing:.02em;}
+    .site-logo em{color:var(--gold2);font-style:normal;}
+    .pc-nav{list-style:none;display:flex;gap:36px;align-items:center;}
+    .pc-nav a{font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:color .25s;position:relative;}
+    .pc-nav a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--gold2);transition:width .3s;}
+    .pc-nav a:hover{color:var(--cream);}
+    .pc-nav a:hover::after,.pc-nav a.active::after{width:100%;}
+    .pc-nav a.active{color:var(--cream);}
+    .hamburger{display:none;flex-direction:column;gap:5px;width:36px;height:36px;align-items:center;justify-content:center;cursor:pointer;border:none;background:none;}
+    .hamburger span{width:24px;height:1.5px;background:var(--cream);border-radius:2px;transition:var(--t) var(--ease);transform-origin:center;}
+    .hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+    .hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+    .hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+    .sp-nav{display:none;flex-direction:column;gap:0;position:fixed;inset:0;z-index:190;background:rgba(8,5,3,.97);padding:100px 48px 48px;}
+    .sp-nav.open{display:flex;}
+    .sp-nav a{font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,5vw,42px);font-weight:700;color:var(--cream);padding:16px 0;border-bottom:1px solid var(--border);transition:color .25s;}
+    .sp-nav a:hover{color:var(--gold2);}
+
+    /* ══ PAGE HERO ══ */
+    .page-hero{position:relative;height:500px;overflow:hidden;background-size:cover;background-position:center;display:flex;align-items:flex-end;}
+    .page-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,5,3,1) 0%,rgba(8,5,3,.55) 50%,rgba(8,5,3,.1) 100%);}
+    .page-hero-inner{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:0 48px 72px;width:100%;}
+    .page-hero-inner h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(36px,6vw,72px);font-weight:700;line-height:1.1;letter-spacing:-.03em;}
+
+    /* ══ UTILITIES ══ */
+    .label-tag{font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px;}
+    .label-tag::before{content:'';width:24px;height:1px;background:var(--gold2);}
+    .sec{padding:100px 0;}
+    .sec-alt{background:var(--bg2);}
+    .wrap{max-width:1240px;margin:0 auto;padding:0 48px;}
+    .h2-style{font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-bottom:52px;}
+    .badge{font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;letter-spacing:.04em;padding:4px 12px;border-radius:50px;border:1px solid var(--border);color:var(--muted);}
+
+    /* ══ BREW NAV ══ */
+    .brew-nav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:64px;}
+    .brew-nav-item{font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;letter-spacing:.06em;padding:10px 22px;border-radius:50px;background:var(--card);color:var(--muted);border:1px solid var(--border);transition:background var(--t),color var(--t),border-color var(--t),transform .2s;cursor:pointer;}
+    .brew-nav-item:hover,.brew-nav-item.active{background:var(--accent);color:var(--cream);border-color:var(--accent);transform:translateY(-2px);}
+
+    /* ══ BREW ARTICLE ══ */
+    .brew-article{display:grid;grid-template-columns:1fr 1.6fr;gap:0;background:var(--card);border-radius:24px;overflow:hidden;margin-bottom:24px;border:1px solid var(--border);transition:box-shadow var(--t);}
+    .brew-article:hover{box-shadow:0 24px 80px rgba(0,0,0,.5);}
+    .brew-article:nth-child(even){grid-template-columns:1.6fr 1fr;}
+    .brew-article:nth-child(even) .brew-visual{order:2;}
+    .brew-article:nth-child(even) .brew-content{order:1;}
+
+    .brew-visual{min-height:380px;position:relative;overflow:hidden;display:flex;align-items:flex-end;}
+    .brew-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.35;filter:saturate(.6);transition:transform .8s var(--ease),opacity .5s;}
+    .brew-article:hover .brew-photo{transform:scale(1.05);opacity:0.45;}
+    .brew-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.6),rgba(0,0,0,.1));z-index:1;}
+    .brew-visual-title{position:relative;z-index:2;font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,3vw,44px);font-weight:700;color:rgba(245,236,224,.9);padding:32px;letter-spacing:-.02em;line-height:1;}
+
+    .bv-drip    {background:linear-gradient(150deg,#2e1508,#6b3a18);}
+    .bv-french  {background:linear-gradient(150deg,#0e1e0c,#2d5522);}
+    .bv-siphon  {background:linear-gradient(150deg,#0e1428,#283060);}
+    .bv-cold    {background:linear-gradient(150deg,#0a1520,#1a3550);}
+    .bv-espresso{background:linear-gradient(150deg,#120603,#3a1408);}
+    .bv-moka    {background:linear-gradient(150deg,#1c1008,#503020);}
+
+    .brew-content{padding:48px 52px;display:flex;flex-direction:column;justify-content:center;}
+    .brew-meta-row{display:flex;gap:24px;margin-bottom:28px;flex-wrap:wrap;}
+    .brew-meta{display:flex;flex-direction:column;gap:3px;}
+    .brew-meta-key{font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,236,224,.35);}
+    .brew-meta-val{font-size:13px;font-weight:700;color:var(--cream);}
+    .brew-content h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(20px,2.5vw,28px);font-weight:700;line-height:1.2;margin-bottom:4px;letter-spacing:-.01em;}
+    .brew-en{font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;color:var(--gold);margin-bottom:20px;letter-spacing:.06em;}
+    .brew-divider{width:36px;height:1px;background:var(--gold2);margin-bottom:20px;}
+    .brew-desc{font-size:15px;line-height:2.3;color:var(--muted);margin-bottom:28px;}
+
+    .brew-ratings{display:flex;gap:32px;margin-bottom:28px;flex-wrap:wrap;}
+    .rating-item{display:flex;flex-direction:column;gap:6px;}
+    .rating-label{font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,236,224,.4);}
+    .rating-dots{display:flex;gap:4px;}
+    .rating-dots span{width:10px;height:10px;border-radius:50%;}
+    .dot-on{background:var(--accent);}
+    .dot-off{background:var(--border);}
+
+    .steps{display:flex;flex-direction:column;gap:14px;}
+    .step{display:flex;gap:16px;align-items:flex-start;}
+    .step-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--cream);font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+    .step-text{font-size:14px;line-height:1.9;color:var(--muted);padding-top:3px;}
+    .brew-beans-label{font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,236,224,.35);margin-bottom:10px;}
+    .brew-tags{display:flex;gap:8px;flex-wrap:wrap;}
+
+    /* ══ COMPARE TABLE ══ */
+    .compare-wrap{overflow-x:auto;}
+    .compare-table{width:100%;border-collapse:collapse;min-width:700px;}
+    .compare-table th{font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--card);color:var(--cream);padding:18px 20px;text-align:left;border-bottom:1px solid var(--border);}
+    .compare-table th:first-child{border-radius:16px 0 0 0;}
+    .compare-table th:last-child{border-radius:0 16px 0 0;}
+    .compare-table td{padding:16px 20px;font-size:13px;line-height:1.6;color:var(--muted);border-bottom:1px solid var(--border);vertical-align:middle;}
+    .compare-table tr:last-child td{border-bottom:none;}
+    .compare-table tr:last-child td:first-child{border-radius:0 0 0 16px;}
+    .compare-table tr:last-child td:last-child{border-radius:0 0 16px 0;}
+    .compare-table tbody tr:nth-child(odd) td{background:var(--bg3);}
+    .compare-table tbody tr:nth-child(even) td{background:var(--card);}
+    .compare-table tbody tr:hover td{background:rgba(196,106,30,.08);}
+    .compare-table td strong{color:var(--cream);}
+    .level-badge{display:inline-block;font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:.06em;padding:3px 10px;border-radius:50px;}
+    .level-easy{background:rgba(40,100,50,.3);color:#7dd87a;}
+    .level-mid{background:rgba(180,100,20,.25);color:var(--gold2);}
+    .level-hard{background:rgba(160,30,30,.3);color:#f08080;}
+
+    /* ══ TIPS ══ */
+    .tips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border-radius:20px;overflow:hidden;}
+    .tip-card{background:var(--card);padding:40px 36px;}
+    .tip-num{font-family:'Space Grotesk',sans-serif;font-size:48px;font-weight:700;line-height:1;color:rgba(240,185,106,.12);margin-bottom:20px;letter-spacing:-.03em;}
+    .tip-card h3{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;margin-bottom:14px;color:var(--cream);}
+    .tip-card p{font-size:14px;line-height:2.2;color:var(--muted);}
+
+    /* ══ COMBO ══ */
+    .combo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;border-radius:20px;overflow:hidden;}
+    .combo-card{background:var(--card);padding:32px 36px;display:flex;gap:24px;align-items:flex-start;}
+    .combo-region{flex-shrink:0;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;padding:6px 10px;border:1px solid var(--border);border-radius:6px;color:var(--gold2);}
+    .combo-card h3{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;margin-bottom:10px;color:var(--cream);line-height:1.3;}
+    .combo-card p{font-size:13px;line-height:2;color:var(--muted);}
+
+    /* ══ CTA ══ */
+    .cta-block{background:linear-gradient(135deg,#3d1c08,var(--accent));border-radius:24px;padding:64px 72px;display:flex;align-items:center;justify-content:space-between;gap:40px;}
+    .cta-block h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,3vw,34px);font-weight:700;color:var(--cream);line-height:1.4;margin-bottom:10px;}
+    .cta-block p{font-size:15px;color:rgba(245,236,224,.7);}
+    .btn-fill{display:inline-flex;align-items:center;gap:10px;font-family:'Poppins',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;padding:16px 36px;border-radius:50px;background:var(--cream);color:#1a0d05;flex-shrink:0;transition:background .3s,transform .3s;}
+    .btn-fill:hover{background:var(--gold2);transform:translateY(-3px);}
+    .btn-fill svg{width:15px;height:15px;transition:transform .3s;}
+    .btn-fill:hover svg{transform:translateX(4px);}
+
+    /* ══ FOOTER ══ */
+    .site-footer{background:#050302;border-top:1px solid var(--border);color:var(--muted);}
+    .footer-wrap{max-width:1240px;margin:0 auto;padding:64px 48px 40px;}
+    .footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:60px;padding-bottom:48px;border-bottom:1px solid var(--border);margin-bottom:36px;}
+    .footer-logo{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:var(--cream);margin-bottom:14px;}
+    .footer-logo em{color:var(--gold2);font-style:normal;}
+    .footer-desc{font-size:13px;line-height:2.2;}
+    .footer-col h4{font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--cream);margin-bottom:20px;}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+    .footer-col ul li a{font-size:13px;transition:color .25s;}
+    .footer-col ul li a:hover{color:var(--gold2);}
+    .footer-bottom{text-align:center;font-size:12px;letter-spacing:.04em;}
+
+    /* ══ BACK TO TOP ══ */
+    .back-top{position:fixed;bottom:32px;right:32px;width:48px;height:48px;background:var(--accent);color:var(--cream);border:none;border-radius:50%;cursor:pointer;z-index:99;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(16px);transition:opacity .4s,transform .4s,background .25s;box-shadow:0 4px 20px rgba(196,106,30,.4);}
+    .back-top.v{opacity:1;transform:translateY(0);}
+    .back-top:hover{background:var(--gold);}
+    .back-top svg{width:20px;height:20px;}
+
+    /* ══ RESPONSIVE ══ */
+    @media(max-width:960px){
+        .pc-nav{display:none;}
+        .hamburger{display:flex;}
+        .header-wrap{padding:16px 24px;}
+        .wrap{padding:0 24px;}
+        .sp-nav{padding:80px 24px 48px;}
+        .footer-top{grid-template-columns:1fr;gap:36px;}
+        .footer-wrap{padding:48px 24px 32px;}
+        .page-hero{height:360px;}
+        .page-hero-inner{padding:0 24px 48px;}
+        .back-top{bottom:20px;right:20px;}
+        .sec{padding:72px 0;}
+        .brew-article,.brew-article:nth-child(even){grid-template-columns:1fr;}
+        .brew-article:nth-child(even) .brew-visual{order:0;}
+        .brew-article:nth-child(even) .brew-content{order:0;}
+        .brew-content{padding:36px 32px;}
+        .brew-visual{min-height:260px;}
+        .tips-grid{grid-template-columns:1fr;}
+        .combo-grid{grid-template-columns:1fr;}
+        .cta-block{flex-direction:column;padding:48px 36px;}
+    }
+    @media(max-width:600px){
+        .wrap{padding:0 20px;}
+        .page-hero{height:280px;}
+        .sec{padding:56px 0;}
+        .brew-content{padding:28px 24px;}
+    }
+    </style>
+</head>
+<body>
+
+<!-- ヘッダー -->
+<header class="site-header" id="siteHeader">
+    <div class="header-wrap">
+        <a href="index.html" class="site-logo"><em>Coffee</em> grow</a>
+        <ul class="pc-nav">
+            <li><a href="index.html">Top</a></li>
+            <li><a href="beans.html">豆 &amp; 焙煎</a></li>
+            <li><a href="brew.html" class="active">淹れ方</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="メニュー">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+    <nav class="sp-nav" id="spNav">
+        <a href="index.html">Top</a>
+        <a href="beans.html">豆 &amp; 焙煎</a>
+        <a href="brew.html">淹れ方</a>
+    </nav>
+</header>
+
+<!-- ページヒーロー -->
+<div class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=1600&q=80'),url(img/coffee1.jpg);background-color:#1e0d05;">
+    <div class="page-hero-inner">
+        <p class="label-tag">Brewing Methods</p>
+        <h1>6つの淹れ方で<br>コーヒーは変わる</h1>
+    </div>
+</div>
+
+<!-- 淹れ方ナビ -->
+<section class="sec" style="padding-bottom:0;">
+    <div class="wrap">
+        <p class="label-tag sr">Methods</p>
+        <h2 class="h2-style sr">コーヒーの淹れ方ガイド</h2>
+        <p style="font-size:16px;line-height:2.3;color:var(--muted);max-width:720px;margin-bottom:48px;" class="sr">
+            同じ豆でも、抽出方法によって風味は大きく変わります。それぞれの器具の特性を理解して、自分の好みに合った一杯を追求しましょう。
+        </p>
+        <div class="brew-nav sr">
+            <button class="brew-nav-item active" onclick="scrollToMethod('drip')">ハンドドリップ</button>
+            <button class="brew-nav-item" onclick="scrollToMethod('french')">フレンチプレス</button>
+            <button class="brew-nav-item" onclick="scrollToMethod('siphon')">サイフォン</button>
+            <button class="brew-nav-item" onclick="scrollToMethod('cold')">コールドブリュー</button>
+            <button class="brew-nav-item" onclick="scrollToMethod('espresso')">エスプレッソ</button>
+            <button class="brew-nav-item" onclick="scrollToMethod('moka')">モカポット</button>
+        </div>
+    </div>
+</section>
+
+<!-- 1. ハンドドリップ -->
+<section class="sec" style="padding-top:0;" id="drip">
+    <div class="wrap">
+
+        <div class="brew-article sr">
+            <div class="brew-visual bv-drip">
+                <img class="brew-photo" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=75" alt="" loading="lazy">
+                <div class="brew-visual-title">Pour Over</div>
+            </div>
+            <div class="brew-content">
+                <div class="brew-meta-row">
+                    <div class="brew-meta"><span class="brew-meta-key">抽出時間</span><span class="brew-meta-val">3〜4分</span></div>
+                    <div class="brew-meta"><span class="brew-meta-key">コーヒー量</span><span class="brew-meta-val">12g / 200ml</span></div>
+                    <div class="brew-meta"><span class="brew-meta-key">湯温</span><span class="brew-meta-val">88〜93℃</span></div>
+                </div>
+                <h2>ハンドドリップ</h2>
+                <p class="brew-en">Hand Drip / Pour Over</p>
+                <div class="brew-divider"></div>
+                <p class="brew-desc">日本で最もポピュラーな抽出方法。ペーパーフィルターが油分や微粒子を取り除くため、クリアで繊細な風味が楽しめます。注ぐ速度や湯量で味をコントロールできるので、奥深い世界が広がります。</p>
+                <div class="brew-ratings">
+                    <div class="rating-item">
+                        <span class="rating-label">難易度</span>
+                        <div class="rating-dots"><span class="dot-on"></span><span class="dot-on"></span><span class="dot-off"></span><span class="dot-off"></span><span class="dot-off"></span></div>
+                    </div>
+                    <div class="rating-item">
+                        <span class="rating-label">ボディ</span>
+                        <div class="rating-dots"><span class="dot-on"></span><span class="dot-on"></span><span class="dot-off"></span><span class="dot-off"></span><span class="dot-off"></span></div>
+                    </div>
+                    <div class="rating-item">
+                        <span class="rating-label">クリア感</span>
+                        <div class="rating-dots"><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span></div>
+                    </div>
+                </div>
+                <div class="steps">
+                    <div class="step"><div class="step-num">1</div><div class="step-text">フィルターをドリッパーにセットし、お湯をかけてリンスする（臭み取り）</div></div>
+                    <div class="step"><div class="step-num">2</div><div class="step-text">コーヒー粉を入れ、中央から外側へ少量注ぎ、30秒蒸らす</div></div>
+                    <div class="step"><div class="step-num">3</div><div class="step-text">中央から円を描くようにゆっくりとお湯を注ぐ（数回に分けて）</div></div>
+                    <div class="step"><div class="step-num">4</div><div class="step-text">規定量が溜まったらドリッパーを外して完成</div></div>
+                </div>
+                <p class="brew-beans-label" style="margin-top:24px;">向いている豆</p>
+                <div class="brew-tags">
+                    <span class="badge">浅煎り〜中煎り</span><span class="badge">エチオピア</span><span class="badge">コロンビア</span><span class="badge">ケニア</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. フレンチプレス -->
+        <div class="brew-article sr" id="french">
+            <div class="brew-visual bv-french">
+                <img class="brew-photo" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=75" alt="" loading="lazy">
+                <div class="brew-visual-title">French Press</div>
+            </div>
+            <div class="brew-content">
+                <div class="brew-meta-row">
+                    <div class="brew-meta"><span class="brew-meta-key">抽出時間</span><span class="brew-meta-val">4分</span></div>
+                    <div class="brew-meta"><span class="brew-meta-key">コーヒー量</span><span class="brew-meta-val">12g / 200ml</span></div>
+                    <div class="brew-meta"><span class="brew-meta-key">湯温</span><span class="brew-meta-val">92〜96℃</span></div>
+                </div>
+                <h2>フレンチプレス</h2>
+                <p class="brew-en">French Press</p>
+                <div class="brew-divider"></div>
+                <p class="brew-desc">豆をお湯に浸漬して抽出する「浸漬式」の代表格。金属メッシュフィルターのため、コーヒーオイルや微粒子がカップに入り、豆本来のコクと風味をダイレクトに楽しめます。操作がシンプルで初心者にも扱いやすい器具です。</p>
+                <div class="brew-ratings">
+                    <div class="rating-item">
+                        <span class="rating-label">難易度</span>
+                        <div class="rating-dots"><span class="dot-on"></span><span class="dot-off"></span><span class="dot-off"></span><span class="dot-off"></span><span class="dot-off"></span></div>
+                    </div>
+                    <div class="rating-item">
+                        <span class="rating-label">ボディ</span>
+                        <div class="rating-dots"><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-off"></span></div>
+                    </div>
+                    <div class="rating-item">
+                        <span class="rating-label">クリア感</span>
+                        <div class="rating-dots"><span class="dot-on"></span><span class="dot-on"></span><span class="dot-off"></span><span class="dot-off"></span><span class="dot-off"></span></div>
+                    </div>
+                </div>
+                <div class="steps">
+                    <div class="step"><div class="step-num">1</div><div class="step-text">やや粗めに挽いた豆をプレスに入れ、お湯を全量注ぐ</div></div>
+                    <div class="step"><div class="step-num">2</div><div class="step-text">軽くかき混ぜてプランジャーをセットし、蓋をして4分待つ</div></div>
+                    <div class="step"><div class="step-num">3</div><div class="step-text">プランジャーをゆっくりと押し下げる（力を入れすぎない）</div></div>
+                    <div class="step"><div class="step-num">4</div><div class="step-text">すぐにカップに注ぐ（放置すると過抽出になる）</div></div>
+                </div>
+                <p class="brew-beans-label" style="margin-top:24px;">向いている豆</p>
+                <div class="brew-tags">
+                    <span class="badge">中煎り〜中深煎り</span><span class="badge">ブラジル</span><span class="badge">インドネシア</span><span class="badge">グアテマラ</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. サイフォン -->
+        <div class="brew-article sr" id="siphon">
+            <div class="brew-visual bv-siphon">
+                <img class="brew-photo" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=75" alt="" loading="lazy">
+                <div class="brew-visual-title">Siphon</div>
+            </div>
+            <div class="brew-content">
+                <div class="brew-meta-row">
+                    <div class="brew-meta"><span class="brew-meta-key">抽出時間</span><span class="brew-meta-val">5〜7分</span></div>
+                    <div class="brew-meta"><span class="brew-meta-key">コーヒー量</span><span class="brew-meta-val">12g / 200ml</span></div>
+                    <div class="brew-meta"><span class="brew-meta-key">湯温</span><span class="brew-meta-val">沸騰〜95℃</span></div>
+                </div>
+                <h2>サイフォン</h2>
+                <p class="brew-en">Siphon / Vacuum Pot</p>
+                <div class="brew-divider"></div>
+                <p class="brew-desc">蒸気圧を利用してお湯を移動させる、まるで実験装置のような器具。抽出温度が高いため香りの立ちが抜群で、クリアでありながらコクのある味わいに仕上がります。テーブルサイドで淹れるパフォーマンスとしても魅力的。</p>
+                <div class="brew-ratings">
+                    <div class="rating-item">
+                        <span class="rating-label">難易度</span>
+                        <div class="rating-dots"><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-off"></span><span class="dot-off"></span></div>
+                    </div>
+                    <div class="rating-item">
+                        <span class="rating-label">香り</span>
+                        <div class="rating-dots"><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span></div>
+                    </div>
+                    <div class="rating-item">
+                        <span class="rating-label">再現性</span>
+                        <div class="rating-dots"><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-off"></span></div>
+                    </div>
+                </div>
+                <div class="steps">
+                    <div class="step"><div class="step-num">1</div><div class="step-text">下のフラスコにお湯を入れ、アルコールランプで加熱する</div></div>
+                    <div class="step"><div class="step-num">2</div><div class="step-text">蒸気圧でお湯が上部ロートに移動したら、コーヒー粉を入れかき混ぜる</div></div>
+                    <div class="step"><div class="step-num">3</div><div class="step-text">1分ほど抽出したら火を止め、お湯が下に落ちるのを待つ</div></div>
+                    <div class="step"><div class="step-num">4</div><div class="step-text">ロートを外してカップに注ぐ</div></div>
+                </div>
+                <p class="brew-beans-label" style="margin-top:24px;">向いている豆</p>
+                <div class="brew-tags">
+                    <span class="badge">浅煎り〜中煎り</span><span class="badge">エチオピア</span><span class="badge">ケニア</span><span class="badge">コロンビア</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. コールドブリュー -->
+        <div class="brew-article sr" id="cold">
+            <div class="brew-visual bv-cold">
+                <img class="brew-photo" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=75" alt="" loading="lazy">
+                <div class="brew-visual-title">Cold Brew</div>
+            </div>
+            <div class="brew-content">
+                <div class="brew-meta-row">
+                    <div class="brew-meta"><span class="brew-meta-key">抽出時間</span><span class="brew-meta-val">8〜24時間</span></div>
+                    <div class="brew-meta"><span class="brew-meta-key">コーヒー量</span><span class="brew-meta-val">60g / 1L</span></div>
+                    <div class="brew-meta"><span class="brew-meta-key">水温</span><span class="brew-meta-val">冷水〜常温</span></div>
+                </div>
+                <h2>コールドブリュー</h2>
+                <p class="brew-en">Cold Brew</p>
+                <div class="brew-divider"></div>
+                <p class="brew-desc">冷水または常温の水でゆっくり時間をかけて抽出する方法。熱を使わないため酸が揮発せず、苦味・雑味が出にくい。まろやかで甘みを感じる滑らかな口当たりが魅力。冷蔵庫で2週間ほど保存できます。</p>
+                <div class="brew-ratings">
+                    <div class="rating-item">
+                        <span class="rating-label">難易度</span>
+                        <div class="rating-dots"><span class="dot-on"></span><span class="dot-off"></span><span class="dot-off"></span><span class="dot-off"></span><span class="dot-off"></span></div>
+                    </div>
+                    <div class="rating-item">
+                        <span class="rating-label">まろやか</span>
+                        <div class="rating-dots"><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span></div>
+                    </div>
+                    <div class="rating-item">
+                        <span class="rating-label">手間</span>
+                        <div class="rating-dots"><span class="dot-on"></span><span class="dot-off"></span><span class="dot-off"></span><span class="dot-off"></span><span class="dot-off"></span></div>
+                    </div>
+                </div>
+                <div class="steps">
+                    <div class="step"><div class="step-num">1</div><div class="step-text">粗く挽いた豆と冷水を1:15〜17の割合で容器に入れる</div></div>
+                    <div class="step"><div class="step-num">2</div><div class="step-text">軽く混ぜて蓋をし、冷蔵庫で8〜24時間寝かせる</div></div>
+                    <div class="step"><div class="step-num">3</div><div class="step-text">コーヒーペーパーや細かいストレーナーでゆっくりろ過する</div></div>
+                    <div class="step"><div class="step-num">4</div><div class="step-text">氷を入れたグラスに注いで完成（原液は1.5〜2倍に希釈してもよい）</div></div>
+                </div>
+                <p class="brew-beans-label" style="margin-top:24px;">向いている豆</p>
+                <div class="brew-tags">
+                    <span class="badge">中深煎り〜深煎り</span><span class="badge">ブラジル</span><span class="badge">コロンビア</span><span class="badge">インドネシア</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. エスプレッソ -->
+        <div class="brew-article sr" id="espresso">
+            <div class="brew-visual bv-espresso">
+                <img class="brew-photo" src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=75" alt="" loading="lazy">
+                <div class="brew-visual-title">Espresso</div>
+            </div>
+            <div class="brew-content">
+                <div class="brew-meta-row">
+                    <div class="brew-meta"><span class="brew-meta-key">抽出時間</span><span class="brew-meta-val">25〜30秒</span></div>
+                    <div class="brew-meta"><span class="brew-meta-key">コーヒー量</span><span class="brew-meta-val">7〜18g</span></div>
+                    <div class="brew-meta"><span class="brew-meta-key">圧力</span><span class="brew-meta-val">9気圧</span></div>
+                </div>
+                <h2>エスプレッソ</h2>
+                <p class="brew-en">Espresso</p>
+                <div class="brew-divider"></div>
+                <p class="brew-desc">9気圧の高圧で細挽きの豆から短時間で抽出する濃縮コーヒー。クレマと呼ばれる茶色い泡が表面を覆うのが本物の証。カフェラテ・カプチーノ・マキアートなど多くのドリンクのベースとなります。</p>
+                <div class="brew-ratings">
+                    <div class="rating-item">
+                        <span class="rating-label">難易度</span>
+                        <div class="rating-dots"><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-off"></span></div>
+                    </div>
+                    <div class="rating-item">
+                        <span class="rating-label">濃度</span>
+                        <div class="rating-dots"><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span></div>
+                    </div>
+                    <div class="rating-item">
+                        <span class="rating-label">コスト</span>
+                        <div class="rating-dots"><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-off"></span></div>
+                    </div>
+                </div>
+                <div class="steps">
+                    <div class="step"><div class="step-num">1</div><div class="step-text">細かく挽いた豆をポルタフィルターに入れタンピングする（約15kgの力）</div></div>
+                    <div class="step"><div class="step-num">2</div><div class="step-text">ポルタフィルターをマシンにセットし、抽出ボタンを押す</div></div>
+                    <div class="step"><div class="step-num">3</div><div class="step-text">25〜30秒で20〜30mlを抽出（クレマが適切に出ているか確認）</div></div>
+                    <div class="step"><div class="step-num">4</div><div class="step-text">そのままショットとして、またはミルクを加えてラテ系ドリンクにアレンジ</div></div>
+                </div>
+                <p class="brew-beans-label" style="margin-top:24px;">向いている豆</p>
+                <div class="brew-tags">
+                    <span class="badge">中深煎り〜深煎り</span><span class="badge">イタリアンロースト</span><span class="badge">ブレンド豆</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. モカポット -->
+        <div class="brew-article sr" id="moka">
+            <div class="brew-visual bv-moka">
+                <img class="brew-photo" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=75" alt="" loading="lazy">
+                <div class="brew-visual-title">Moka Pot</div>
+            </div>
+            <div class="brew-content">
+                <div class="brew-meta-row">
+                    <div class="brew-meta"><span class="brew-meta-key">抽出時間</span><span class="brew-meta-val">5〜8分</span></div>
+                    <div class="brew-meta"><span class="brew-meta-key">コーヒー量</span><span class="brew-meta-val">バスケット満杯</span></div>
+                    <div class="brew-meta"><span class="brew-meta-key">圧力</span><span class="brew-meta-val">1〜2気圧</span></div>
+                </div>
+                <h2>モカポット</h2>
+                <p class="brew-en">Moka Pot / Stovetop Espresso</p>
+                <div class="brew-divider"></div>
+                <p class="brew-desc">イタリア生まれの直火式エスプレッソメーカー。マシンより低圧ですが、濃縮感のある力強いコーヒーが抽出できます。コンパクトで安価なため、家庭での本格コーヒー入門器具として世界中で愛されています。</p>
+                <div class="brew-ratings">
+                    <div class="rating-item">
+                        <span class="rating-label">難易度</span>
+                        <div class="rating-dots"><span class="dot-on"></span><span class="dot-on"></span><span class="dot-off"></span><span class="dot-off"></span><span class="dot-off"></span></div>
+                    </div>
+                    <div class="rating-item">
+                        <span class="rating-label">濃度</span>
+                        <div class="rating-dots"><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-off"></span></div>
+                    </div>
+                    <div class="rating-item">
+                        <span class="rating-label">コスパ</span>
+                        <div class="rating-dots"><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span><span class="dot-on"></span></div>
+                    </div>
+                </div>
+                <div class="steps">
+                    <div class="step"><div class="step-num">1</div><div class="step-text">下部タンクに沸騰直前のお湯を安全弁の下まで入れる</div></div>
+                    <div class="step"><div class="step-num">2</div><div class="step-text">バスケットに中挽き〜細挽きの豆を山盛りにし、平らにならす（タンピングは不要）</div></div>
+                    <div class="step"><div class="step-num">3</div><div class="step-text">上部ポットをしっかりと閉め、弱〜中火にかける</div></div>
+                    <div class="step"><div class="step-num">4</div><div class="step-text">ゴボゴボという音がしたら火を止め、すぐにカップへ</div></div>
+                </div>
+                <p class="brew-beans-label" style="margin-top:24px;">向いている豆</p>
+                <div class="brew-tags">
+                    <span class="badge">中深煎り〜深煎り</span><span class="badge">ブラジル</span><span class="badge">グアテマラ</span><span class="badge">イタリアンブレンド</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- 比較表 -->
+<section class="sec sec-alt">
+    <div class="wrap">
+        <p class="label-tag sr">Comparison</p>
+        <h2 class="h2-style sr">淹れ方 比較表</h2>
+        <div class="compare-wrap sr">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>方法</th>
+                        <th>難易度</th>
+                        <th>抽出時間</th>
+                        <th>口当たり</th>
+                        <th>こんな人に</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ハンドドリップ</strong></td>
+                        <td><span class="level-badge level-mid">普通</span></td>
+                        <td>3〜4分</td>
+                        <td>クリア・繊細</td>
+                        <td>豆の個性・産地の風味を楽しみたい人</td>
+                    </tr>
+                    <tr>
+                        <td><strong>フレンチプレス</strong></td>
+                        <td><span class="level-badge level-easy">簡単</span></td>
+                        <td>4分</td>
+                        <td>コク・オイリー</td>
+                        <td>道具少なく手軽に本格コーヒーを飲みたい人</td>
+                    </tr>
+                    <tr>
+                        <td><strong>サイフォン</strong></td>
+                        <td><span class="level-badge level-mid">普通</span></td>
+                        <td>5〜7分</td>
+                        <td>香り高い・クリア</td>
+                        <td>見た目や演出も楽しみたい人・香りにこだわる人</td>
+                    </tr>
+                    <tr>
+                        <td><strong>コールドブリュー</strong></td>
+                        <td><span class="level-badge level-easy">簡単</span></td>
+                        <td>8〜24時間</td>
+                        <td>まろやか・甘み</td>
+                        <td>苦味が苦手な人・大量に作り置きしたい人</td>
+                    </tr>
+                    <tr>
+                        <td><strong>エスプレッソ</strong></td>
+                        <td><span class="level-badge level-hard">上級</span></td>
+                        <td>25〜30秒</td>
+                        <td>濃縮・力強い</td>
+                        <td>カフェクオリティを自宅で再現したい本格派</td>
+                    </tr>
+                    <tr>
+                        <td><strong>モカポット</strong></td>
+                        <td><span class="level-badge level-mid">普通</span></td>
+                        <td>5〜8分</td>
+                        <td>濃縮・ビター</td>
+                        <td>手軽にエスプレッソ風を楽しみたい人</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- 美味しく淹れるコツ -->
+<section class="sec">
+    <div class="wrap">
+        <p class="label-tag sr">Tips</p>
+        <h2 class="h2-style sr">美味しく淹れるための3つのポイント</h2>
+        <div class="tips-grid">
+            <div class="tip-card sr d1">
+                <div class="tip-num">01</div>
+                <h3>水にこだわる</h3>
+                <p>コーヒーの約98%は水。日本の軟水はコーヒー抽出に向いていますが、市販の軟水ミネラルウォーターを使うとさらに雑味が減ります。硬水はコクが出やすい一方、ドリップでは過抽出になりやすいので注意。</p>
+            </div>
+            <div class="tip-card sr d2">
+                <div class="tip-num">02</div>
+                <h3>湯温を調整する</h3>
+                <p>最適な抽出温度は88〜96℃。沸騰したお湯はそのまま使わず、30秒ほど待つか別容器に移すと良い温度になります。浅煎りは高め（93〜96℃）、深煎りは低め（88〜91℃）がおすすめです。</p>
+            </div>
+            <div class="tip-card sr d3">
+                <div class="tip-num">03</div>
+                <h3>豆は直前に挽く</h3>
+                <p>コーヒー豆は挽いた瞬間から酸化が始まります。1〜2杯分ずつ抽出直前に挽くのが理想。グラインダーはコーン式（コニカル式）がおすすめで、均一な粒度が安定した味を生み出します。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 組み合わせおすすめ -->
+<section class="sec" style="padding-top:0;">
+    <div class="wrap">
+        <p class="label-tag sr">Pairing</p>
+        <h2 class="h2-style sr">豆 × 淹れ方 おすすめの組み合わせ</h2>
+        <div class="combo-grid">
+            <div class="combo-card sr d1">
+                <div class="combo-region">ET</div>
+                <div>
+                    <h3>エチオピア浅煎り × ハンドドリップ</h3>
+                    <p>ベリーやジャスミンのフルーティーな香りが最もクリアに表現されます。フィルターが雑味を取り除き、産地の個性が際立つ最高の組み合わせ。</p>
+                </div>
+            </div>
+            <div class="combo-card sr d2">
+                <div class="combo-region">BR</div>
+                <div>
+                    <h3>ブラジル中深煎り × フレンチプレス</h3>
+                    <p>コーヒーオイルがそのままカップに入り、ナッツとチョコレートのコクが全開に。マグカップで飲むのが特においしい組み合わせです。</p>
+                </div>
+            </div>
+            <div class="combo-card sr d3">
+                <div class="combo-region">CO</div>
+                <div>
+                    <h3>コロンビア中煎り × サイフォン</h3>
+                    <p>キャラメルと柑橘のバランスが取れたコロンビアはサイフォンの高温抽出で香りが最大限に引き出されます。見た目の優雅さも加点ポイント。</p>
+                </div>
+            </div>
+            <div class="combo-card sr d4">
+                <div class="combo-region">ID</div>
+                <div>
+                    <h3>インドネシア深煎り × コールドブリュー</h3>
+                    <p>重厚なボディとスパイシーなニュアンスが冷水抽出でまろやかに。アルコールのような深みが生まれ、ロックで飲むと格別の美味しさです。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTAバナー -->
+<section class="sec" style="padding-top:0;">
+    <div class="wrap">
+        <div class="cta-block sr">
+            <div>
+                <h2>好みの豆を見つけよう</h2>
+                <p>産地・品種・焙煎度から、あなたにぴったりの豆を探しましょう。</p>
+            </div>
+            <a href="beans.html" class="btn-fill">
+                豆ガイドへ
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- フッター -->
+<footer class="site-footer">
+    <div class="footer-wrap">
+        <div class="footer-top">
+            <div>
+                <div class="footer-logo"><em>Coffee</em> grow</div>
+                <p class="footer-desc">コーヒーの豆・産地・焙煎・淹れ方まで。<br>みんなが沼るコーヒーの世界を深掘りします。</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contents</h4>
+                <ul>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="beans.html">豆 &amp; 焙煎ガイド</a></li>
+                    <li><a href="brew.html">淹れ方ガイド</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>このページ</h4>
+                <ul>
+                    <li><a href="#drip">ハンドドリップ</a></li>
+                    <li><a href="#french">フレンチプレス</a></li>
+                    <li><a href="#siphon">サイフォン</a></li>
+                    <li><a href="#cold">コールドブリュー</a></li>
+                    <li><a href="#espresso">エスプレッソ</a></li>
+                    <li><a href="#moka">モカポット</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Coffee grow. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="トップへ">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script src="index.js"></script>
+</body>
+</html>
