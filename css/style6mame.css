@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+}
+.pop{font-family: 'Poppings',sans-serif;}
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.hide{
+    text-align:left ;
+}
+.body{
+    max-width: 1400px;
+}
+.header{
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 27px 0;
+    letter-spacing: -0.04em;
+    background: white;
+}
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+.logo span{
+    color: #be6318;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.header h1{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+.frex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.header_menu li {
+    margin-left: 40px;
+    list-style: none;
+}
+.header_menu li a {
+    transition: .3s;
+}
+.header_menu li a:hover {
+    color: #be6318;
+    transition: .3s;
+
+}
+/* メイン */
+.hide2_inner {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    font-size: 26px;
+}
+.box1 {
+    margin-bottom: 10px;
+}
+.box2 {
+    margin: auto;
+}
+#hide2 {
+    background-image: url(../img/coffee1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 540px;
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 90px;
+    position: relative;
+    overflow: hidden;
+}
+#hide2::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #000 ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.hide2_inner {
+    z-index: 2;
+    color:white;
+    width: 100%;
+    text-align: center;
+}
+
+.hide2_inner {
+    font-weight: 700;
+}
+
+.hide2_inner {
+    font-weight:500;
+}
+
+.conteiner {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*コンセプト*/
+#concept {
+    margin-bottom: 120px;
+}
+.hide_3{
+    font-size: 20px;
+    font-weight: 500;
+    color: #be6318;
+    margin-bottom: 20px;
+}
+
+#concept h3 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.columu-2 {
+    width: 48%;
+}
+.text {
+    line-height: 2.5;
+    font-weight: 700;
+    font-size: 18px;
+}
+.concept-img {
+    background-image: url(../img/coffee2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 370px;
+    border-radius: 20px;
+}
+
+.text-2 {
+    font-size: 26px;
+    font-weight: 70px;
+    margin-bottom: 10px;
+    line-height: 2;
+}
+.text-3 {
+    line-height: 3;
+    font-weight: 700;
+    font-size: 18px;
+    
+}
+#concept h4{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.h3 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*三大品種*/
+#concept-img2 {
+    background-image: url(../img/coffee4.jpg);
+    background-position: top;
+    background-size: cover;
+    height: 540px;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    border-radius: 25px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    opacity: 0.9;
+    display: block;
+} 
+
+.heading{
+    font-family: 'Dancing Script',cursive;
+    font-size: 200px;
+    font-weight: 700;
+    color: #be6318;
+    opacity: 0.1;
+    position:absolute;
+    right: 0;
+    max-width: 1400px;
+    width: 100%;
+    transform: translateY(-30%);
+    right: -25%;
+}
+.heading2{
+    font-family: 'Dancing Script',cursive;
+    font-size: 200px;
+    font-weight: 700;
+    color: #be6318;
+    opacity: 0.1;
+    position:absolute;
+    transform: translateY(-30%);
+    text-align: right;
+    max-width: 1400px;
+    width: 90%;
+}
