@@ -668,7 +668,7 @@
 
     /* ══ AFFILIATE ══ */
     .affiliate-sec{position:relative;padding:110px 0;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;text-align:center;}
-    .affiliate-sec::before{content:'RAKUTEN';font-family:'Space Grotesk',sans-serif;font-size:clamp(80px,16vw,220px);font-weight:700;color:rgba(245,236,224,.022);letter-spacing:.08em;white-space:nowrap;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;}
+    .affiliate-sec::before{display:none;}
     .affiliate-inner{position:relative;z-index:2;max-width:680px;margin:0 auto;padding:0 48px;}
     .affiliate-link{display:block;color:inherit;}
     .affiliate-pr{display:inline-block;font-family:'Poppins',sans-serif;font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,236,224,.28);border:1px solid rgba(245,236,224,.12);border-radius:3px;padding:2px 8px;margin-bottom:24px;}
@@ -694,9 +694,9 @@
     .ad-slide-1{animation:adCycle1 18s ease-in-out infinite;}
     .ad-slide-2{animation:adCycle2 18s ease-in-out infinite;}
     .ad-slide-3{animation:adCycle3 18s ease-in-out infinite;}
-    @keyframes adCycle1{0%{opacity:1;}27%{opacity:1;}33%{opacity:0;}100%{opacity:0;}}
-    @keyframes adCycle2{0%{opacity:0;}33%{opacity:0;}38%{opacity:1;}61%{opacity:1;}66%{opacity:0;}100%{opacity:0;}}
-    @keyframes adCycle3{0%{opacity:0;}66%{opacity:0;}72%{opacity:1;}94%{opacity:1;}100%{opacity:0;}}
+    @keyframes adCycle1{0%{opacity:1;visibility:visible;}27%{opacity:1;visibility:visible;}33%{opacity:0;visibility:hidden;}100%{opacity:0;visibility:hidden;}}
+    @keyframes adCycle2{0%{opacity:0;visibility:hidden;}32%{opacity:0;visibility:hidden;}33%{opacity:0;visibility:visible;}38%{opacity:1;visibility:visible;}61%{opacity:1;visibility:visible;}66%{opacity:0;visibility:hidden;}100%{opacity:0;visibility:hidden;}}
+    @keyframes adCycle3{0%{opacity:0;visibility:hidden;}65%{opacity:0;visibility:hidden;}66%{opacity:0;visibility:visible;}72%{opacity:1;visibility:visible;}94%{opacity:1;visibility:visible;}100%{opacity:0;visibility:hidden;}}
 
     /* ══ FOOTER ══════════════════════════════════════ */
     .site-footer{
