@@ -687,6 +687,16 @@
     .affiliate-banner-wrap img{display:block;max-width:100%;height:auto;}
     .affiliate-text-link{display:inline-block;margin-top:28px;font-family:'Poppins',sans-serif;font-size:12px;letter-spacing:.04em;color:var(--muted);border-bottom:1px solid rgba(245,236,224,.2);padding-bottom:2px;transition:color .2s,border-color .2s;}
     .affiliate-text-link:hover{color:var(--gold2);border-color:var(--gold2);}
+    /* ══ AD SLIDER ══ */
+    .ad-slider{position:relative;height:264px;margin:0 auto;max-width:340px;}
+    .ad-slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+    .ad-slide img{max-width:100%;max-height:264px;height:auto;display:block;}
+    .ad-slide-1{animation:adCycle1 18s ease-in-out infinite;}
+    .ad-slide-2{animation:adCycle2 18s ease-in-out infinite;}
+    .ad-slide-3{animation:adCycle3 18s ease-in-out infinite;}
+    @keyframes adCycle1{0%{opacity:1;}27%{opacity:1;}33%{opacity:0;}100%{opacity:0;}}
+    @keyframes adCycle2{0%{opacity:0;}33%{opacity:0;}38%{opacity:1;}61%{opacity:1;}66%{opacity:0;}100%{opacity:0;}}
+    @keyframes adCycle3{0%{opacity:0;}66%{opacity:0;}72%{opacity:1;}94%{opacity:1;}100%{opacity:0;}}
 
     /* ══ FOOTER ══════════════════════════════════════ */
     .site-footer{
@@ -1174,20 +1184,26 @@
 <section class="affiliate-sec">
     <div class="affiliate-inner">
         <span class="affiliate-pr">PR</span>
-        <div class="affiliate-ads-row">
-            <a href="https://rpx.a8.net/svt/ejp?a8mat=4B3KUS+CJW0XE+2HOM+61C2P&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26050710820_4B3KUS_CJW0XE_2HOM_61C2P%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow" target="_blank" class="affiliate-banner-wrap">
-                <div class="affiliate-img-wrap">
+        <div class="ad-slider">
+            <div class="ad-slide ad-slide-1">
+                <a href="https://rpx.a8.net/svt/ejp?a8mat=4B3KUS+CJW0XE+2HOM+61C2P&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26050710820_4B3KUS_CJW0XE_2HOM_61C2P%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow" target="_blank">
                     <img src="https://hbb.afl.rakuten.co.jp/hsb/0eb4bbd4.2e342e3f.0eb4bbaa.95151395/" border="0" alt="楽天市場">
-                </div>
-            </a>
-            <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4B3KUS+CJW0XE+2HOM+61C2P" alt="" style="display:none;">
-            <a href="https://px.a8.net/svt/ejp?a8mat=4B3KUT+2WSB8Y+5QM2+5YZ75" rel="nofollow" target="_blank" class="affiliate-banner-wrap">
-                <img border="0" width="300" height="250" alt="" src="https://www28.a8.net/svt/bgt?aid=260507477176&wid=001&eno=01&mid=s00000026777001003000&mc=1">
-            </a>
-            <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3KUT+2WSB8Y+5QM2+5YZ75" alt="" style="display:none;">
+                </a>
+            </div>
+            <div class="ad-slide ad-slide-2">
+                <a href="https://px.a8.net/svt/ejp?a8mat=4B3KUT+2WSB8Y+5QM2+5YZ75" rel="nofollow" target="_blank">
+                    <img border="0" width="300" height="250" alt="" src="https://www28.a8.net/svt/bgt?aid=260507477176&wid=001&eno=01&mid=s00000026777001003000&mc=1">
+                </a>
+            </div>
+            <div class="ad-slide ad-slide-3">
+                <a href="https://px.a8.net/svt/ejp?a8mat=4B3R2W+15OD4I+2CG0+601S1" rel="nofollow" target="_blank">
+                    <img border="0" width="125" height="125" alt="" src="https://www28.a8.net/svt/bgt?aid=260515544070&wid=001&eno=01&mid=s00000010944001008000&mc=1">
+                </a>
+            </div>
         </div>
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B3KUT+2WSB8Y+5QM2+5YJRM" rel="nofollow" target="_blank" class="affiliate-text-link">日常の生活を豊かにする至福のコーヒー豆販売【自家焙煎珈琲カフェ・ヴェルディ】</a>
-        <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4B3KUT+2WSB8Y+5QM2+5YJRM" alt="" style="display:none;">
+        <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4B3KUS+CJW0XE+2HOM+61C2P" alt="" style="display:none;">
+        <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3KUT+2WSB8Y+5QM2+5YZ75" alt="" style="display:none;">
+        <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3R2W+15OD4I+2CG0+601S1" alt="" style="display:none;">
     </div>
 </section>
 
