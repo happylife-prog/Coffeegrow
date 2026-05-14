@@ -184,22 +184,28 @@
     .guide-text strong{color:var(--cream);font-weight:700;}
 
     /* ══ A8 PRODUCT CARD (card-06 style) ══ */
-    .rank-a8-body{grid-template-columns:60px 250px 1fr !important;align-items:stretch;}
-    .rank-a8-photo-col{display:flex;align-items:center;justify-content:center;padding:16px;border-right:1px solid var(--border);overflow:hidden;}
+    .rank-a8-body{grid-template-columns:60px 300px 1fr !important;align-items:stretch;}
+    .rank-a8-photo-col{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:18px 16px;border-right:1px solid var(--border);overflow:hidden;}
     .rank-a8-body .rank-num{color:rgba(245,236,224,.38)!important;}
-    .rank-a8-photo-col .a8ad{display:flex;align-items:center;justify-content:center;font-size:0;line-height:0;max-height:240px;overflow:hidden;}
-    .rank-a8-photo-col .a8ad a{display:block;line-height:0;position:relative;overflow:hidden;border-radius:2px;cursor:pointer;}
-    .rank-a8-photo-col .a8ad a::after{content:'SHOP →';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--cream);background:rgba(12,8,5,.55);opacity:0;transition:opacity .3s var(--ease);}
+    .rank-a8-photo-col .a8ad{display:flex;align-items:center;justify-content:center;font-size:0;line-height:0;overflow:hidden;}
+    .rank-a8-photo-col .a8ad a{display:block;line-height:0;position:relative;overflow:hidden;border-radius:4px;cursor:pointer;
+        box-shadow:0 4px 20px rgba(0,0,0,.5);
+        outline:1.5px solid rgba(240,185,106,.22);
+        transition:outline-color .3s,transform .3s var(--ease);}
+    .rank-a8-photo-col .a8ad a:hover{outline-color:rgba(240,185,106,.7);transform:scale(1.02);}
+    .rank-a8-photo-col .a8ad a::after{content:'🛒 商品ページへ';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Noto Sans JP',sans-serif;font-size:13px;font-weight:700;letter-spacing:.06em;color:#fff;background:rgba(12,8,5,.62);opacity:0;transition:opacity .3s var(--ease);}
     .rank-a8-photo-col .a8ad a:hover::after{opacity:1;}
-    .rank-a8-photo-col .a8ad img{width:210px;height:auto;display:block;border-radius:2px;filter:brightness(.88) saturate(.8);transition:filter .5s var(--ease);}
+    .rank-a8-photo-col .a8ad img{width:260px;height:auto;display:block;border-radius:4px;filter:brightness(.9) saturate(.85);transition:filter .5s var(--ease);}
     .rank-card:hover .rank-a8-photo-col .a8ad img{filter:brightness(1) saturate(1);}
+    /* リンクバッジ（常時表示） */
+    .a8-link-badge{display:inline-flex;align-items:center;gap:5px;font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--gold2);background:rgba(240,185,106,.12);border:1px solid rgba(240,185,106,.3);border-radius:50px;padding:4px 12px;white-space:nowrap;pointer-events:none;}
     .rank-a8-info-col{padding:22px 26px;display:flex;flex-direction:column;justify-content:center;gap:8px;}
     .rank-a8-hero-name{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;color:var(--cream);line-height:1.3;}
     .rank-a8-hero-shop{font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);}
     .rank-a8-hero-note{font-size:13px;color:var(--muted);line-height:1.8;margin-top:10px;}
-    @media(max-width:1024px){.rank-a8-body{grid-template-columns:48px 200px 1fr !important;}.rank-a8-photo-col .a8ad img{width:170px;}}
-    @media(max-width:640px){.rank-a8-body{grid-template-columns:40px 130px 1fr !important;}.rank-a8-photo-col{padding:10px;}.rank-a8-photo-col .a8ad img{width:108px;}.rank-a8-info-col{padding:14px;}.rank-a8-hero-name{font-size:15px;}}
-    @media(max-width:420px){.rank-a8-body{grid-template-columns:36px 96px 1fr !important;}.rank-a8-photo-col .a8ad img{width:78px;}}
+    @media(max-width:1024px){.rank-a8-body{grid-template-columns:48px 240px 1fr !important;}.rank-a8-photo-col .a8ad img{width:210px;}}
+    @media(max-width:640px){.rank-a8-body{grid-template-columns:40px 150px 1fr !important;}.rank-a8-photo-col{padding:12px 10px;gap:7px;}.rank-a8-photo-col .a8ad img{width:126px;}.rank-a8-info-col{padding:14px;}.rank-a8-hero-name{font-size:15px;}.a8-link-badge{font-size:9px;padding:3px 9px;}}
+    @media(max-width:420px){.rank-a8-body{grid-template-columns:36px 110px 1fr !important;}.rank-a8-photo-col .a8ad img{width:92px;}.a8-link-badge{display:none;}}
 
     /* ══ AD SLIDER ══ */
     .ad-slider{position:relative;height:264px;margin:0 auto;max-width:340px;}
@@ -356,6 +362,7 @@
                     <div class="rank-num-col"><span class="rank-num rank-1">01</span></div>
                     <div class="rank-a8-photo-col">
                         <span class="a8ad 4Am2PcQ-g7-vj27Te8"></span>
+                        <span class="a8-link-badge">🛒 クリックで購入</span>
                     </div>
                     <div class="rank-a8-info-col">
                         <p class="rank-a8-hero-name">ヴェルディブレンド（中深煎り）100g</p>
@@ -371,6 +378,7 @@
                     <div class="rank-num-col"><span class="rank-num rank-2">02</span></div>
                     <div class="rank-a8-photo-col">
                         <span class="a8ad 4Am2PcQ-g7-vj2cDTg"></span>
+                        <span class="a8-link-badge">🛒 クリックで購入</span>
                     </div>
                     <div class="rank-a8-info-col">
                         <p class="rank-a8-hero-name">下鴨ブレンド（深煎り）100g</p>
@@ -387,6 +395,7 @@
                     <div class="rank-num-col"><span class="rank-num rank-3">03</span></div>
                     <div class="rank-a8-photo-col">
                         <span class="a8ad 4Am2PcQ-g7-vj2tvws"></span>
+                        <span class="a8-link-badge">🛒 クリックで購入</span>
                     </div>
                     <div class="rank-a8-info-col">
                         <p class="rank-a8-hero-name">スカルピアの悪だくみブレンド（深煎り）100g</p>
@@ -410,6 +419,7 @@
                     <div class="rank-num-col"><span class="rank-num">04</span></div>
                     <div class="rank-a8-photo-col">
                         <span class="a8ad 4AmwtrL-g7-vjBoUjv"></span>
+                        <span class="a8-link-badge">🛒 クリックで購入</span>
                     </div>
                     <div class="rank-a8-info-col">
                         <p class="rank-a8-hero-name">INIC coffee ライトノートアロマ 12本入り</p>
@@ -429,6 +439,7 @@
                     <div class="rank-num-col"><span class="rank-num">05</span></div>
                     <div class="rank-a8-photo-col">
                         <span class="a8ad 4AmwtrL-g7-vjBqtcc"></span>
+                        <span class="a8-link-badge">🛒 クリックで購入</span>
                     </div>
                     <div class="rank-a8-info-col">
                         <p class="rank-a8-hero-name">モーニングアロマ バリスタメイド キャラメル</p>
