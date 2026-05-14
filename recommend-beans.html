@@ -111,7 +111,7 @@
     .intro-box p{font-size:14px;color:var(--muted);line-height:2.3;}
 
     /* ══ RANK CARDS ══ */
-    .rank-list{display:flex;flex-direction:column;gap:3px;}
+    .rank-list{display:flex;flex-direction:column;gap:10px;}
 
     .rank-card{background:var(--card);border:1px solid var(--border);overflow:hidden;transition:box-shadow .4s var(--ease),border-color .3s,transform .4s var(--ease);}
     .rank-card:hover{box-shadow:0 20px 60px rgba(0,0,0,.55);border-color:rgba(240,185,106,.18);transform:translateY(-2px);}
@@ -186,14 +186,17 @@
     /* ══ A8 PRODUCT CARD (card-06 style) ══ */
     .rank-a8-body{grid-template-columns:60px 250px 1fr !important;align-items:stretch;}
     .rank-a8-photo-col{display:flex;align-items:center;justify-content:center;padding:16px;border-right:1px solid var(--border);overflow:hidden;}
-    .rank-a8-photo-col .a8ad{display:block;font-size:0;line-height:0;overflow:hidden;}
-    .rank-a8-photo-col .a8ad a{display:block;line-height:0;}
+    .rank-a8-body .rank-num{color:rgba(245,236,224,.38)!important;}
+    .rank-a8-photo-col .a8ad{display:flex;align-items:center;justify-content:center;font-size:0;line-height:0;max-height:240px;overflow:hidden;}
+    .rank-a8-photo-col .a8ad a{display:block;line-height:0;position:relative;overflow:hidden;border-radius:2px;cursor:pointer;}
+    .rank-a8-photo-col .a8ad a::after{content:'SHOP →';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--cream);background:rgba(12,8,5,.55);opacity:0;transition:opacity .3s var(--ease);}
+    .rank-a8-photo-col .a8ad a:hover::after{opacity:1;}
     .rank-a8-photo-col .a8ad img{width:210px;height:auto;display:block;border-radius:2px;filter:brightness(.88) saturate(.8);transition:filter .5s var(--ease);}
     .rank-card:hover .rank-a8-photo-col .a8ad img{filter:brightness(1) saturate(1);}
     .rank-a8-info-col{padding:22px 26px;display:flex;flex-direction:column;justify-content:center;gap:8px;}
     .rank-a8-hero-name{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;color:var(--cream);line-height:1.3;}
     .rank-a8-hero-shop{font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);}
-    .rank-a8-hero-note{font-size:13px;color:var(--muted);line-height:1.8;}
+    .rank-a8-hero-note{font-size:13px;color:var(--muted);line-height:1.8;margin-top:10px;}
     @media(max-width:1024px){.rank-a8-body{grid-template-columns:48px 200px 1fr !important;}.rank-a8-photo-col .a8ad img{width:170px;}}
     @media(max-width:640px){.rank-a8-body{grid-template-columns:40px 130px 1fr !important;}.rank-a8-photo-col{padding:10px;}.rank-a8-photo-col .a8ad img{width:108px;}.rank-a8-info-col{padding:14px;}.rank-a8-hero-name{font-size:15px;}}
     @media(max-width:420px){.rank-a8-body{grid-template-columns:36px 96px 1fr !important;}.rank-a8-photo-col .a8ad img{width:78px;}}
