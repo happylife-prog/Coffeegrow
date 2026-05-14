@@ -37,7 +37,7 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;700&family=Poppins:wght@300;400;600;700&family=Playfair+Display:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;700&family=Poppins:wght@300;400;600;700&family=Playfair+Display:ital,wght@1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
     <style>
     /* ══ RESET & TOKENS ══════════════════════════════ */
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -64,7 +64,7 @@
     .site-header{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 48px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,box-shadow .4s,backdrop-filter .4s;}
     .site-header.scrolled{background:rgba(12,8,5,.88);backdrop-filter:blur(20px);box-shadow:0 1px 0 var(--border);}
     .logo{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;letter-spacing:.02em;}
-    .logo em{font-style:normal;color:var(--gold2);}
+    .logo em{font-style:italic;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:22px;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
     .pc-nav{list-style:none;display:flex;gap:36px;align-items:center;}
     .pc-nav a{font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:color .25s;position:relative;}
     .pc-nav a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--gold2);transition:width .3s;}
@@ -183,9 +183,33 @@
     .guide-text{font-size:12px;color:var(--muted);line-height:1.7;}
     .guide-text strong{color:var(--cream);font-weight:700;}
 
+    /* ══ A8 PRODUCT CARD (card-06 style) ══ */
+    .rank-a8-body{grid-template-columns:60px 250px 1fr !important;align-items:stretch;}
+    .rank-a8-photo-col{display:flex;align-items:center;justify-content:center;padding:16px;border-right:1px solid var(--border);overflow:hidden;}
+    .rank-a8-photo-col .a8ad{display:block;font-size:0;line-height:0;overflow:hidden;}
+    .rank-a8-photo-col .a8ad a{display:block;line-height:0;}
+    .rank-a8-photo-col .a8ad img{width:210px;height:auto;display:block;border-radius:2px;filter:brightness(.88) saturate(.8);transition:filter .5s var(--ease);}
+    .rank-card:hover .rank-a8-photo-col .a8ad img{filter:brightness(1) saturate(1);}
+    .rank-a8-info-col{padding:22px 26px;display:flex;flex-direction:column;justify-content:center;gap:8px;}
+    .rank-a8-hero-name{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;color:var(--cream);line-height:1.3;}
+    .rank-a8-hero-shop{font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);}
+    .rank-a8-hero-note{font-size:13px;color:var(--muted);line-height:1.8;}
+    @media(max-width:1024px){.rank-a8-body{grid-template-columns:48px 200px 1fr !important;}.rank-a8-photo-col .a8ad img{width:170px;}}
+    @media(max-width:640px){.rank-a8-body{grid-template-columns:40px 130px 1fr !important;}.rank-a8-photo-col{padding:10px;}.rank-a8-photo-col .a8ad img{width:108px;}.rank-a8-info-col{padding:14px;}.rank-a8-hero-name{font-size:15px;}}
+    @media(max-width:420px){.rank-a8-body{grid-template-columns:36px 96px 1fr !important;}.rank-a8-photo-col .a8ad img{width:78px;}}
+
+    /* ══ AD SLIDER ══ */
+    .ad-slider{position:relative;height:264px;margin:0 auto;max-width:340px;}
+    .ad-slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+    .ad-slide img{max-width:100%;max-height:264px;height:auto;display:block;}
+    .ad-slide-1{animation:adCycle1 10s ease-in-out infinite;}
+    .ad-slide-2{animation:adCycle2 10s ease-in-out infinite;}
+    @keyframes adCycle1{0%{opacity:1;}43%{opacity:1;}50%{opacity:0;}93%{opacity:0;}100%{opacity:1;}}
+    @keyframes adCycle2{0%{opacity:0;}43%{opacity:0;}50%{opacity:1;}93%{opacity:1;}100%{opacity:0;}}
+
     /* ══ AFFILIATE ══ */
-    .affiliate-sec{position:relative;padding:110px 0;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;text-align:center;}
-    .affiliate-sec::before{content:'RAKUTEN';font-family:'Space Grotesk',sans-serif;font-size:clamp(80px,16vw,220px);font-weight:700;color:rgba(245,236,224,.022);letter-spacing:.08em;white-space:nowrap;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;}
+    .affiliate-sec{position:relative;padding:60px 0;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;text-align:center;}
+    .affiliate-sec::before{content:'';}
     .affiliate-inner{position:relative;z-index:2;max-width:680px;margin:0 auto;padding:0 48px;}
     .affiliate-link{display:block;color:inherit;}
     .affiliate-pr{display:inline-block;font-family:'Poppins',sans-serif;font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,236,224,.28);border:1px solid rgba(245,236,224,.12);border-radius:3px;padding:2px 8px;margin-bottom:24px;}
@@ -225,7 +249,7 @@
     /* ══ RESPONSIVE ══ */
     @media(max-width:1024px){
         .site-header{padding:20px 32px;}
-        .pc-nav,.header-cta{display:none;}
+        .pc-nav{display:none;}
         .hamburger{display:flex;}
         .sp-nav{padding:90px 32px 48px;}
         .layout-outer{grid-template-columns:1fr;padding:56px 32px 80px;}
@@ -255,6 +279,17 @@
         .footer-bottom{flex-direction:column;align-items:center;text-align:center;gap:12px;}
         .layout-outer{padding:44px 24px 64px;}
     }
+    @media(max-width:420px){
+        .rank-card-body{grid-template-columns:36px 72px 1fr;}
+        .rank-photo-col img{width:64px;height:64px;}
+        .rank-num{font-size:20px;}
+        .rank-name{font-size:14px;}
+        .rank-origin{display:none;}
+        .rank-info-col{padding:12px 12px;}
+        .rank-tags{gap:4px;}
+        .rank-tag{font-size:10px;padding:3px 10px;}
+        .rank-card-bottom{padding:10px 16px;}
+    }
     </style>
 </head>
 <body>
@@ -268,7 +303,6 @@
         <li><a href="brew.html">淹れ方</a></li>
         <li><a href="recommend-beans.html" class="active">おすすめ豆</a></li>
     </ul>
-    <a href="recommend-beans.html" class="header-cta active">おすすめ豆</a>
     <button class="hamburger" id="hamburger" aria-label="メニュー">
         <span></span><span></span><span></span>
     </button>
@@ -313,214 +347,96 @@
             <div class="rank-card sr" id="pick-01">
                 <div class="rank-card-label label-best">
                     <svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                    編集部イチ推し
+                    Pickup
                 </div>
-                <div class="rank-card-body">
+                <div class="rank-card-body rank-a8-body">
                     <div class="rank-num-col"><span class="rank-num rank-1">01</span></div>
-                    <div class="rank-photo-col">
-                        <img src="https://images.unsplash.com/photo-1504630083234-14187a9df0f5?auto=format&fit=crop&w=220&h=220&q=80" alt="丸山珈琲 イルガチェフェ">
+                    <div class="rank-a8-photo-col">
+                        <span class="a8ad 4Am2PcQ-g7-vj27Te8"></span>
                     </div>
-                    <div class="rank-info-col">
-                        <p class="rank-brand">丸山珈琲</p>
-                        <p class="rank-name">エチオピア イルガチェフェ ウォレカ G1</p>
-                        <p class="rank-origin">Ethiopia / Yirgacheffe / Washed / 浅煎り</p>
-                        <p class="rank-note">ジャスミンのような華やかな香りとレモンティーを思わせる明るい酸味。一口目から別格とわかる質の高さ。ハンドドリップで真価を発揮する。</p>
-                        <div class="rank-tags">
-                            <span class="rank-tag gold">フルーティー</span>
-                            <span class="rank-tag">フローラル</span>
-                            <span class="rank-tag">ウォッシュド</span>
-                        </div>
+                    <div class="rank-a8-info-col">
+                        <p class="rank-a8-hero-name">ヴェルディブレンド（中深煎り）100g</p>
+                        <p class="rank-a8-hero-shop">Caffè Verdi 自家焙煎珈琲</p>
+                        <p class="rank-a8-hero-note">TPOを選ばず毎日飲んでも飽きないデイリーユースのコーヒー。開業以来もっとも多くのお客様に親しまれている自信の一杯。</p>
                     </div>
-                    <div class="rank-score-col">
-                        <div>
-                            <div class="score-num">9.3</div>
-                            <div class="score-stars">
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            </div>
-                            <div class="score-label">最もおすすめ</div>
-                        </div>
-                        <p class="rank-price">¥1,650 <small>/ 100g</small></p>
-                        <p class="rank-where">公式通販・全国7店舗</p>
-                        <a href="https://rpx.a8.net/svt/ejp?a8mat=4B3KUS+CJW0XE+2HOM+656YP&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26050710820_4B3KUS_CJW0XE_2HOM_656YP%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow" target="_blank" class="btn-rakuten">楽天で探す</a>
-                    </div>
-                </div>
-                <div class="rank-card-bottom">
-                    <div><p class="rank-price">¥1,650 <small>/ 100g</small></p><p class="rank-where">公式通販・全国7店舗</p></div>
-                    <a href="https://rpx.a8.net/svt/ejp?a8mat=4B3KUS+CJW0XE+2HOM+656YP&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26050710820_4B3KUS_CJW0XE_2HOM_656YP%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow" target="_blank" class="btn-rakuten" style="width:auto;padding:10px 20px;">楽天で探す</a>
                 </div>
             </div>
 
             <!-- ─ 02 ─ -->
             <div class="rank-card sr d1" id="pick-02">
-                <div class="rank-card-body">
+                <div class="rank-card-body rank-a8-body">
                     <div class="rank-num-col"><span class="rank-num rank-2">02</span></div>
-                    <div class="rank-photo-col">
-                        <img src="https://images.unsplash.com/photo-1477090792768-1e58823e72a0?auto=format&fit=crop&w=220&h=220&q=80" alt="堀口珈琲 ケニア">
+                    <div class="rank-a8-photo-col">
+                        <span class="a8ad 4Am2PcQ-g7-vj2cDTg"></span>
                     </div>
-                    <div class="rank-info-col">
-                        <p class="rank-brand">堀口珈琲</p>
-                        <p class="rank-name">ケニア キリニャガ AA</p>
-                        <p class="rank-origin">Kenya / Kirinyaga / Washed / 浅〜中煎り</p>
-                        <p class="rank-note">ブラックカラントを思わせるベリー感とワインのような複雑な余韻。酸味とコクのバランスが絶妙で毎日飲んでも飽きない仕上がり。</p>
-                        <div class="rank-tags">
-                            <span class="rank-tag gold">ベリー系</span>
-                            <span class="rank-tag">ワイン感</span>
-                            <span class="rank-tag">ケニア</span>
-                        </div>
+                    <div class="rank-a8-info-col">
+                        <p class="rank-a8-hero-name">下鴨ブレンド（深煎り）100g</p>
+                        <p class="rank-a8-hero-shop">Caffè Verdi 自家焙煎珈琲</p>
+                        <p class="rank-a8-hero-note">ヴェルディブレンドより1段深めの焙煎。まろやかな苦みとコク、甘い余韻をお楽しみください。</p>
                     </div>
-                    <div class="rank-score-col">
-                        <div>
-                            <div class="score-num">9.1</div>
-                            <div class="score-stars">
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-off" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            </div>
-                            <div class="score-label">かなりおすすめ</div>
-                        </div>
-                        <p class="rank-price">¥2,052 <small>/ 200g</small></p>
-                        <p class="rank-where">公式通販・世田谷店</p>
-                        <a href="https://rpx.a8.net/svt/ejp?a8mat=4B3KUS+CJW0XE+2HOM+656YP&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26050710820_4B3KUS_CJW0XE_2HOM_656YP%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow" target="_blank" class="btn-rakuten">楽天で探す</a>
-                    </div>
-                </div>
-                <div class="rank-card-bottom">
-                    <div><p class="rank-price">¥2,052 <small>/ 200g</small></p><p class="rank-where">公式通販・世田谷店</p></div>
-                    <a href="https://rpx.a8.net/svt/ejp?a8mat=4B3KUS+CJW0XE+2HOM+656YP&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26050710820_4B3KUS_CJW0XE_2HOM_656YP%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow" target="_blank" class="btn-rakuten" style="width:auto;padding:10px 20px;">楽天で探す</a>
                 </div>
             </div>
+
 
             <!-- ─ 03 ─ -->
             <div class="rank-card sr d2" id="pick-03">
-                <div class="rank-card-body">
+                <div class="rank-card-body rank-a8-body">
                     <div class="rank-num-col"><span class="rank-num rank-3">03</span></div>
-                    <div class="rank-photo-col">
-                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=220&h=220&q=80" alt="猿田彦珈琲 エチオピア">
+                    <div class="rank-a8-photo-col">
+                        <span class="a8ad 4Am2PcQ-g7-vj2tvws"></span>
                     </div>
-                    <div class="rank-info-col">
-                        <p class="rank-brand">猿田彦珈琲</p>
-                        <p class="rank-name">エチオピア ゲデオ ナチュラル</p>
-                        <p class="rank-origin">Ethiopia / Gedeo / Natural / 浅煎り</p>
-                        <p class="rank-note">ブルーベリーとストロベリーが溶け合ったような甘い発酵感。フルーティーな豆への入門としても最適な一本。</p>
-                        <div class="rank-tags">
-                            <span class="rank-tag gold">ブルーベリー</span>
-                            <span class="rank-tag">ナチュラル</span>
-                            <span class="rank-tag">エチオピア</span>
-                        </div>
+                    <div class="rank-a8-info-col">
+                        <p class="rank-a8-hero-name">スカルピアの悪だくみブレンド（深煎り）100g</p>
+                        <p class="rank-a8-hero-shop">Caffè Verdi 自家焙煎珈琲</p>
+                        <p class="rank-a8-hero-note">2026年度は月替わりで店主の趣味で作るブレンドを販売。今までにない味わいをお試しください。</p>
                     </div>
-                    <div class="rank-score-col">
-                        <div>
-                            <div class="score-num">9.0</div>
-                            <div class="score-stars">
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-off" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            </div>
-                            <div class="score-label">かなりおすすめ</div>
-                        </div>
-                        <p class="rank-price">¥1,728 <small>/ 200g</small></p>
-                        <p class="rank-where">公式通販・恵比寿店</p>
-                        <a href="https://rpx.a8.net/svt/ejp?a8mat=4B3KUS+CJW0XE+2HOM+656YP&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26050710820_4B3KUS_CJW0XE_2HOM_656YP%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow" target="_blank" class="btn-rakuten">楽天で探す</a>
-                    </div>
-                </div>
-                <div class="rank-card-bottom">
-                    <div><p class="rank-price">¥1,728 <small>/ 200g</small></p><p class="rank-where">公式通販・恵比寿店</p></div>
-                    <a href="https://rpx.a8.net/svt/ejp?a8mat=4B3KUS+CJW0XE+2HOM+656YP&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26050710820_4B3KUS_CJW0XE_2HOM_656YP%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow" target="_blank" class="btn-rakuten" style="width:auto;padding:10px 20px;">楽天で探す</a>
                 </div>
             </div>
+
+            <!-- A8 product script -->
+            <script type="text/javascript" src="//statics.a8.net/ad/ad.js"></script>
+            <script type="text/javascript">
+            a8adscript('body').showAd({"req":{"mat":"4B3KUT+2WSB8Y+5QM2+BWGDT","alt":"商品リンク","id":"4Am2PcQ-g7-vj27Te8"},"goods":{"ejp":"h"+"ttps://shopping.verdi.jp/view/item/000000000090?category_page_id=ct10","imu":"h"+"ttps://makeshop-multi-images.akamaized.net/caffeVerdi/shopimages/90/00/1_000000000090.jpg?1728274952"}});
+            a8adscript('body').showAd({"req":{"mat":"4B3KUT+2WSB8Y+5QM2+BWGDT","alt":"商品リンク","id":"4Am2PcQ-g7-vj2cDTg"},"goods":{"ejp":"h"+"ttps://shopping.verdi.jp/view/item/000000000126?category_page_id=ct10","imu":"h"+"ttps://makeshop-multi-images.akamaized.net/caffeVerdi/shopimages/26/01/2_000000000126.jpg?1678209904"}});
+            a8adscript('body').showAd({"req":{"mat":"4B3KUT+2WSB8Y+5QM2+BWGDT","alt":"商品リンク","id":"4Am2PcQ-g7-vj2tvws"},"goods":{"ejp":"h"+"ttps://shopping.verdi.jp/view/item/000000000952","imu":"h"+"ttps://makeshop-multi-images.akamaized.net/caffeVerdi/itemimages/000000000952_Ya6F8iT.jpg"}});
+            </script>
 
             <!-- ─ 04 ─ -->
             <div class="rank-card sr d3" id="pick-04">
-                <div class="rank-card-body">
+                <div class="rank-card-body rank-a8-body">
                     <div class="rank-num-col"><span class="rank-num">04</span></div>
-                    <div class="rank-photo-col">
-                        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=220&h=220&q=80" alt="Blue Bottle スリーアフリカス">
+                    <div class="rank-a8-photo-col">
+                        <span class="a8ad 4AmwtrL-g7-vjBoUjv"></span>
                     </div>
-                    <div class="rank-info-col">
-                        <p class="rank-brand">Blue Bottle Coffee</p>
-                        <p class="rank-name">スリーアフリカス</p>
-                        <p class="rank-origin">Blend / Ethiopia · Rwanda · Burundi / 中煎り</p>
-                        <p class="rank-note">ネクタリンのような甘みとビタースイートチョコレートの余韻。Amazon・全国店舗で購入できる入手性の高さも評価ポイント。</p>
-                        <div class="rank-tags">
-                            <span class="rank-tag gold">ネクタリン</span>
-                            <span class="rank-tag">チョコレート</span>
-                            <span class="rank-tag">バランス</span>
-                        </div>
+                    <div class="rank-a8-info-col">
+                        <p class="rank-a8-hero-name">INIC coffee ライトノートアロマ 12本入り</p>
+                        <p class="rank-a8-hero-shop">INIC coffee / inic-market.com</p>
+                        <p class="rank-a8-hero-note">お湯を注ぐだけで本格コーヒーが楽しめるパウダータイプ。軽やかな香りとすっきりした後味で毎日飲んでも飽きない一品。</p>
                     </div>
-                    <div class="rank-score-col">
-                        <div>
-                            <div class="score-num">8.8</div>
-                            <div class="score-stars">
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-off" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            </div>
-                            <div class="score-label">おすすめ</div>
-                        </div>
-                        <p class="rank-price">¥1,850 <small>/ 227g</small></p>
-                        <p class="rank-where">公式・Amazon・全国店</p>
-                        <a href="https://rpx.a8.net/svt/ejp?a8mat=4B3KUS+CJW0XE+2HOM+656YP&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26050710820_4B3KUS_CJW0XE_2HOM_656YP%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow" target="_blank" class="btn-rakuten">楽天で探す</a>
-                    </div>
-                </div>
-                <div class="rank-card-bottom">
-                    <div><p class="rank-price">¥1,850 <small>/ 227g</small></p><p class="rank-where">公式・Amazon・全国店</p></div>
-                    <a href="https://rpx.a8.net/svt/ejp?a8mat=4B3KUS+CJW0XE+2HOM+656YP&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26050710820_4B3KUS_CJW0XE_2HOM_656YP%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow" target="_blank" class="btn-rakuten" style="width:auto;padding:10px 20px;">楽天で探す</a>
                 </div>
             </div>
+            <script type="text/javascript">
+            a8adscript('body').showAd({"req":{"mat":"4B3QB3+662PF6+3NWC+BWGDT","alt":"商品リンク","id":"4AmwtrL-g7-vjBoUjv"},"goods":{"ejp":"h"+"ttps://www.inic-market.com/c/inic_lineup/coffee/smooth_aroma/lightnote_aroma/4582651243013","imu":"h"+"ttps://inicmarket.itembox.cloud/product/018/000000001835/000000001835-05.jpg?size=l&w=ODAw&t=20240523105702"}});
+            </script>
+            <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B3QB3+662PF6+3NWC+BW8O2" alt="" style="display:none;">
 
             <!-- ─ 05 ─ -->
             <div class="rank-card sr d4" id="pick-05">
-                <div class="rank-card-label label-chain">
-                    <svg fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm1 11H9V9h2v4zm0-6H9V5h2v2z"/></svg>
-                    チェーン店一番
-                </div>
-                <div class="rank-card-body">
+                <div class="rank-card-body rank-a8-body">
                     <div class="rank-num-col"><span class="rank-num">05</span></div>
-                    <div class="rank-photo-col">
-                        <img src="https://images.unsplash.com/photo-1534040385115-33dcb3acba5b?auto=format&fit=crop&w=220&h=220&q=80" alt="ドトール スペシャルティグレード">
+                    <div class="rank-a8-photo-col">
+                        <span class="a8ad 4AmwtrL-g7-vjBqtcc"></span>
                     </div>
-                    <div class="rank-info-col">
-                        <p class="rank-brand">ドトールコーヒー</p>
-                        <p class="rank-name">スペシャルティグレード エチオピア</p>
-                        <p class="rank-origin">Ethiopia / Specialty Grade / 中煎り</p>
-                        <p class="rank-note">全国のドトール店舗で買えるスペシャルティグレード。チェーン店品質としては驚くほどの完成度。マイルドな果実味とすっきりとした後味が続く。</p>
-                        <div class="rank-tags">
-                            <span class="rank-tag gold">チェーン購入可</span>
-                            <span class="rank-tag">マイルド</span>
-                            <span class="rank-tag">すっきり</span>
-                        </div>
+                    <div class="rank-a8-info-col">
+                        <p class="rank-a8-hero-name">モーニングアロマ バリスタメイド キャラメル</p>
+                        <p class="rank-a8-hero-shop">INIC coffee</p>
+                        <p class="rank-a8-hero-note">牛乳で溶かすカフェオレ専用「モーニングアロマ バリスタメイド」キャラメルフレーバー。エチオピアコーヒー×キャラメルのコクの本格キャラメルラテ。</p>
                     </div>
-                    <div class="rank-score-col">
-                        <div>
-                            <div class="score-num">8.3</div>
-                            <div class="score-stars">
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-on" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-off" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="star-off" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            </div>
-                            <div class="score-label">おすすめ</div>
-                        </div>
-                        <p class="rank-price">¥1,200 <small>/ 160g</small></p>
-                        <p class="rank-where">全国ドトール店舗</p>
-                        <a href="https://rpx.a8.net/svt/ejp?a8mat=4B3KUS+CJW0XE+2HOM+656YP&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26050710820_4B3KUS_CJW0XE_2HOM_656YP%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow" target="_blank" class="btn-rakuten">楽天で探す</a>
-                    </div>
-                </div>
-                <div class="rank-card-bottom">
-                    <div><p class="rank-price">¥1,200 <small>/ 160g</small></p><p class="rank-where">全国ドトール店舗</p></div>
-                    <a href="https://rpx.a8.net/svt/ejp?a8mat=4B3KUS+CJW0XE+2HOM+656YP&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26050710820_4B3KUS_CJW0XE_2HOM_656YP%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow" target="_blank" class="btn-rakuten" style="width:auto;padding:10px 20px;">楽天で探す</a>
                 </div>
             </div>
+            <script type="text/javascript">
+            a8adscript('body').showAd({"req":{"mat":"4B3QB3+662PF6+3NWC+BWGDT","alt":"商品リンク","id":"4AmwtrL-g7-vjBqtcc"},"goods":{"ejp":"h"+"ttps://www.inic-market.com/c/inic_lineup/sweet/4582651243341","imu":"h"+"ttps://inicmarket.itembox.cloud/product/018/000000001864/000000001864-04.jpg?size=l&w=ODAw&t=20240926183149"}});
+            </script>
 
             <!-- ─ 06 ─ -->
             <div class="rank-card sr" id="pick-06">
@@ -692,19 +608,21 @@
 <!-- ══ AFFILIATE ══ -->
 <section class="affiliate-sec">
     <div class="affiliate-inner">
-        <a href="https://rpx.a8.net/svt/ejp?a8mat=4B3KUS+CJW0XE+2HOM+656YP&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26050710820_4B3KUS_CJW0XE_2HOM_656YP%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow" target="_blank" class="affiliate-link">
-            <span class="affiliate-pr">PR</span>
-            <p class="affiliate-eyebrow">Shopping Guide</p>
-            <h2 class="affiliate-headline">気になった豆を<br>楽天市場でチェック</h2>
-            <p class="affiliate-sub">丸山珈琲・猿田彦・堀口珈琲など紹介した豆をまとめて比較・購入。ポイント還元でお得に。</p>
-            <div class="affiliate-logo-row">
-                <div class="affiliate-img-wrap">
+        <span class="affiliate-pr">PR</span>
+        <div class="ad-slider">
+            <div class="ad-slide ad-slide-1">
+                <a href="https://rpx.a8.net/svt/ejp?a8mat=4B3KUS+CJW0XE+2HOM+656YP&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26050710820_4B3KUS_CJW0XE_2HOM_656YP%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow" target="_blank">
                     <img src="http://hbb.afl.rakuten.co.jp/hsb/0ec09ba3.bc2429d5.0eb4bbaa.95151395/" border="0" alt="楽天市場">
-                </div>
-                <span class="affiliate-cta-btn">楽天市場で豆を探す</span>
+                </a>
             </div>
-        </a>
+            <div class="ad-slide ad-slide-2">
+                <a href="https://px.a8.net/svt/ejp?a8mat=4B3KUT+2WSB8Y+5QM2+5YZ75" rel="nofollow" target="_blank">
+                    <img border="0" width="300" height="250" alt="" src="https://www28.a8.net/svt/bgt?aid=260507477176&wid=001&eno=01&mid=s00000026777001003000&mc=1">
+                </a>
+            </div>
+        </div>
         <img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B3KUS+CJW0XE+2HOM+656YP" alt="" style="display:none;">
+        <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3KUT+2WSB8Y+5QM2+5YZ75" alt="" style="display:none;">
     </div>
 </section>
 

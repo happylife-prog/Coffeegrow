@@ -59,7 +59,7 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
     <style>
     /* ══ RESET & TOKENS ══ */
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -85,7 +85,7 @@
     .site-header{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 48px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,box-shadow .4s,backdrop-filter .4s;}
     .site-header.scrolled{background:rgba(12,8,5,.88);backdrop-filter:blur(20px);box-shadow:0 1px 0 var(--border);}
     .logo{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;letter-spacing:.02em;}
-    .logo em{font-style:normal;color:var(--gold2);}
+    .logo em{font-style:italic;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:22px;background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
     .pc-nav{list-style:none;display:flex;gap:36px;align-items:center;}
     .pc-nav a{font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:color .25s;position:relative;}
     .pc-nav a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--gold2);transition:width .3s;}
@@ -241,7 +241,6 @@
     /* ══ RESPONSIVE ══ */
     @media(max-width:960px){
         .pc-nav{display:none;}
-        .header-cta{display:none;}
         .hamburger{display:flex;}
         .site-header{padding:20px 32px;}
         .wrap{padding:0 24px;}
@@ -267,7 +266,8 @@
         .page-hero{height:280px;}
         .sec{padding:56px 0;}
         .roast-scale{grid-template-columns:1fr;}
-        .roast-8{grid-template-columns:repeat(4,1fr);padding:24px 16px;gap:12px;}
+        .roast-8{grid-template-columns:repeat(2,1fr);padding:24px 16px;gap:12px;}
+        .cta-block{padding:40px 24px;}
     }
     </style>
 </head>
@@ -282,7 +282,6 @@
         <li><a href="brew.html">淹れ方</a></li>
         <li><a href="recommend-beans.html">おすすめ豆</a></li>
     </ul>
-    <a href="recommend-beans.html" class="header-cta">おすすめ豆</a>
     <button class="hamburger" id="hamburger" aria-label="メニュー">
         <span></span><span></span><span></span>
     </button>

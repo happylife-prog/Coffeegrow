@@ -681,6 +681,12 @@
     .affiliate-cta-btn{display:inline-flex;align-items:center;gap:10px;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;letter-spacing:.06em;background:var(--gold2);color:var(--bg1);padding:16px 44px;border-radius:50px;transition:opacity .25s,transform .3s var(--ease);}
     .affiliate-link:hover .affiliate-cta-btn{opacity:.85;transform:translateY(-3px);}
     .affiliate-cta-btn::after{content:'→';font-size:15px;}
+    .affiliate-ads-row{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:28px;}
+    .affiliate-banner-wrap{display:inline-block;border-radius:6px;overflow:hidden;transition:opacity .25s,transform .3s var(--ease);}
+    .affiliate-banner-wrap:hover{opacity:.88;transform:translateY(-4px);}
+    .affiliate-banner-wrap img{display:block;max-width:100%;height:auto;}
+    .affiliate-text-link{display:inline-block;margin-top:28px;font-family:'Poppins',sans-serif;font-size:12px;letter-spacing:.04em;color:var(--muted);border-bottom:1px solid rgba(245,236,224,.2);padding-bottom:2px;transition:color .2s,border-color .2s;}
+    .affiliate-text-link:hover{color:var(--gold2);border-color:var(--gold2);}
 
     /* ══ FOOTER ══════════════════════════════════════ */
     .site-footer{
@@ -739,7 +745,7 @@
     /* ══ RESPONSIVE ══════════════════════════════════ */
     @media(max-width:1024px){
         .site-header{padding:20px 32px;}
-        .pc-nav,.header-cta{display:none;}
+        .pc-nav{display:none;}
         .hamburger{display:flex;}
         .concept{grid-template-columns:1fr;gap:0;padding:80px 32px;}
         .concept-left{border-right:none;border-bottom:1px solid var(--border);padding-right:0;padding-bottom:48px;margin-bottom:48px;}
@@ -812,7 +818,6 @@
         <li><a href="brew.html">淹れ方</a></li>
         <li><a href="recommend-beans.html">おすすめ豆</a></li>
     </ul>
-    <a href="recommend-beans.html" class="header-cta">おすすめ豆</a>
     <button class="hamburger" id="hamburger" aria-label="メニュー">
         <span></span><span></span><span></span>
     </button>
@@ -1168,19 +1173,21 @@
 <!-- ══ AFFILIATE ══ -->
 <section class="affiliate-sec">
     <div class="affiliate-inner">
-        <a href="https://rpx.a8.net/svt/ejp?a8mat=4B3KUS+CJW0XE+2HOM+61C2P&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26050710820_4B3KUS_CJW0XE_2HOM_61C2P%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow" target="_blank" class="affiliate-link">
-            <span class="affiliate-pr">PR</span>
-            <p class="affiliate-eyebrow">Shopping Guide</p>
-            <h2 class="affiliate-headline">コーヒー豆・道具を<br>楽天市場でまとめて探す</h2>
-            <p class="affiliate-sub">豊富な品揃えとポイント還元で、コーヒーライフをもっとお得に。気になった豆や器具はすぐにチェック。</p>
-            <div class="affiliate-logo-row">
+        <span class="affiliate-pr">PR</span>
+        <div class="affiliate-ads-row">
+            <a href="https://rpx.a8.net/svt/ejp?a8mat=4B3KUS+CJW0XE+2HOM+61C2P&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26050710820_4B3KUS_CJW0XE_2HOM_61C2P%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" rel="nofollow" target="_blank" class="affiliate-banner-wrap">
                 <div class="affiliate-img-wrap">
                     <img src="https://hbb.afl.rakuten.co.jp/hsb/0eb4bbd4.2e342e3f.0eb4bbaa.95151395/" border="0" alt="楽天市場">
                 </div>
-                <span class="affiliate-cta-btn">楽天市場で探す</span>
-            </div>
-        </a>
-        <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4B3KUS+CJW0XE+2HOM+61C2P" alt="" style="display:none;">
+            </a>
+            <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4B3KUS+CJW0XE+2HOM+61C2P" alt="" style="display:none;">
+            <a href="https://px.a8.net/svt/ejp?a8mat=4B3KUT+2WSB8Y+5QM2+5YZ75" rel="nofollow" target="_blank" class="affiliate-banner-wrap">
+                <img border="0" width="300" height="250" alt="" src="https://www28.a8.net/svt/bgt?aid=260507477176&wid=001&eno=01&mid=s00000026777001003000&mc=1">
+            </a>
+            <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3KUT+2WSB8Y+5QM2+5YZ75" alt="" style="display:none;">
+        </div>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B3KUT+2WSB8Y+5QM2+5YJRM" rel="nofollow" target="_blank" class="affiliate-text-link">日常の生活を豊かにする至福のコーヒー豆販売【自家焙煎珈琲カフェ・ヴェルディ】</a>
+        <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4B3KUT+2WSB8Y+5QM2+5YJRM" alt="" style="display:none;">
     </div>
 </section>
 
