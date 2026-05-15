@@ -824,6 +824,24 @@
         .o-name{font-size:18px;}
         .hero h1{font-size:40px;}
     }
+
+    /* ══ ARTICLE CARDS ══ */
+    .articles-sec{padding:100px 0;background:var(--bg2);}
+    .articles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;border-radius:20px;overflow:hidden;}
+    .article-card{position:relative;background:var(--card);overflow:hidden;display:flex;flex-direction:column;transition:transform var(--t) var(--ease);}
+    .article-card:hover{transform:translateY(-6px);z-index:2;}
+    .article-card-img{height:220px;overflow:hidden;position:relative;}
+    .article-card-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.65) saturate(.8);transition:transform .8s var(--ease),filter .8s var(--ease);}
+    .article-card:hover .article-card-img img{transform:scale(1.06);filter:brightness(.8) saturate(.9);}
+    .article-card-body{padding:32px 32px 40px;display:flex;flex-direction:column;flex:1;}
+    .article-tag{font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold2);margin-bottom:12px;}
+    .article-card h3{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:var(--cream);line-height:1.4;margin-bottom:12px;}
+    .article-card p{font-size:13px;line-height:2;color:var(--muted);flex:1;}
+    .article-card-arrow{display:inline-flex;align-items:center;gap:8px;font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold2);margin-top:20px;transition:gap .3s;}
+    .article-card:hover .article-card-arrow{gap:14px;}
+    .article-card-arrow svg{width:14px;height:14px;}
+    @media(max-width:960px){.articles-sec{padding:72px 0;}.articles-grid{grid-template-columns:1fr;}}
+    @media(max-width:600px){.articles-sec{padding:56px 0;}.article-card-img{height:180px;}}
     </style>
 </head>
 <body>
@@ -1172,6 +1190,60 @@
     </div>
 </section>
 
+<!-- ══ ARTICLES ══════════════════════════════════════ -->
+<section class="articles-sec">
+    <div class="wrap">
+        <p class="label-tag sr" style="justify-content:flex-start;">Articles</p>
+        <h2 class="section-title sr">コーヒーをもっと<br>深掘りする</h2>
+        <div class="articles-grid" style="margin-top:48px;">
+            <a href="choose-beans.html" class="article-card sr d1">
+                <div class="article-card-img">
+                    <img src="https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?auto=format&fit=crop&w=800&q=75" alt="コーヒー豆の選び方" loading="lazy">
+                </div>
+                <div class="article-card-body">
+                    <p class="article-tag">For Beginners</p>
+                    <h3>コーヒー豆の選び方<br>初心者完全ガイド</h3>
+                    <p>焙煎度・産地・飲み方の3ステップで「自分だけの一杯」が見つかる。初めてのスペシャルティコーヒー選びに。</p>
+                    <span class="article-card-arrow">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </a>
+            <a href="cafe-verdi.html" class="article-card sr d2">
+                <div class="article-card-img">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=75" alt="カフェヴェルディ レビュー" loading="lazy">
+                </div>
+                <div class="article-card-body">
+                    <p class="article-tag">Review</p>
+                    <h3>カフェヴェルディ<br>通販 徹底レビュー</h3>
+                    <p>京都のスペシャルティロースター「カフェヴェルディ」の人気商品を編集部が実際に購入してレビュー。</p>
+                    <span class="article-card-arrow">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </a>
+            <a href="snoopy-coffee.html" class="article-card sr d3">
+                <div class="article-card-img">
+                    <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=800&q=75" alt="スヌーピーコーヒー" loading="lazy">
+                </div>
+                <div class="article-card-body">
+                    <p class="article-tag">PEANUTS Coffee</p>
+                    <h3>スヌーピーコーヒー<br>完全ガイド</h3>
+                    <p>スヌーピー生誕75周年記念ブレンドを徹底紹介。ギフトにも最適なPEANUTS coffeeの魅力とは。</p>
+                    <span class="article-card-arrow">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </a>
+            <a href="dripper.html" class="article-card sr d4">
+                <div class="article-card-img">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=75" alt="ドリッパー比較" loading="lazy">
+                </div>
+                <div class="article-card-body">
+                    <p class="article-tag">Gear Review</p>
+                    <h3>ドリッパー徹底比較<br>V60 vs メリタ vs カリタ</h3>
+                    <p>3大ドリッパーの違いを項目別スコアで比較。初心者向けおすすめからV60の使い方まで解説。</p>
+                    <span class="article-card-arrow">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
 <!-- ══ CTA ════════════════════════════════════════════ -->
 <section class="cta-sec">
     <div class="cta-inner">
@@ -1233,14 +1305,16 @@
                     <li><a href="index.html">トップ</a></li>
                     <li><a href="beans.html">豆 &amp; 焙煎ガイド</a></li>
                     <li><a href="brew.html">淹れ方ガイド</a></li>
+                    <li><a href="recommend-beans.html">おすすめ豆6選</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Beans</h4>
+                <h4>Articles</h4>
                 <ul>
-                    <li><a href="beans.html#varieties">三大品種</a></li>
-                    <li><a href="beans.html#origins">産地ガイド</a></li>
-                    <li><a href="beans.html#roast">焙煎度ガイド</a></li>
+                    <li><a href="choose-beans.html">コーヒー豆の選び方</a></li>
+                    <li><a href="cafe-verdi.html">カフェヴェルディ レビュー</a></li>
+                    <li><a href="snoopy-coffee.html">スヌーピーコーヒー紹介</a></li>
+                    <li><a href="dripper.html">ドリッパー比較</a></li>
                 </ul>
             </div>
         </div>
