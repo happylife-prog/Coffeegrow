@@ -205,6 +205,19 @@
     .btn-fill svg{width:15px;height:15px;transition:transform .3s;}
     .btn-fill:hover svg{transform:translateX(4px);}
 
+    /* BACK TO BLOG */
+    .article-meta-bar{background:var(--bg2);border-bottom:1px solid var(--border);padding:18px 0;}
+    .article-meta-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;}
+    .back-blog{font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:inline-flex;align-items:center;gap:8px;transition:color .25s;}
+    .back-blog:hover{color:var(--gold2);}
+    .back-blog svg{width:14px;height:14px;flex-shrink:0;}
+    .article-meta-info{display:flex;align-items:center;gap:16px;font-family:'Poppins',sans-serif;font-size:11px;color:rgba(245,236,224,.3);letter-spacing:.06em;}
+    .cat-pill{font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 12px;border-radius:50px;}
+    .cat-guide{background:rgba(196,106,30,.18);color:#e8a870;border:1px solid rgba(196,106,30,.3);}
+    .back-blog-bottom{display:inline-flex;align-items:center;gap:10px;font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 28px;border-radius:50px;border:1px solid var(--border);color:var(--muted);transition:border-color .25s,color .25s,transform .25s;}
+    .back-blog-bottom:hover{border-color:var(--gold2);color:var(--gold2);transform:translateX(-4px);}
+    .back-blog-bottom svg{width:14px;height:14px;}
+
     /* FOOTER */
     .site-footer{background:#050302;border-top:1px solid var(--border);color:var(--muted);}
     .footer-wrap{max-width:1240px;margin:0 auto;padding:64px 48px 40px;}
@@ -284,6 +297,21 @@
     <div class="page-hero-inner">
         <p class="label-tag">For Beginners</p>
         <h1 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,5.5vw,68px);font-weight:700;line-height:1.1;letter-spacing:-.03em;text-shadow:0 2px 24px rgba(0,0,0,.5);">コーヒー豆の選び方<br>初心者完全ガイド</h1>
+    </div>
+</div>
+
+<!-- 記事メタバー -->
+<div class="article-meta-bar">
+    <div class="wrap">
+        <a href="blog.html" class="back-blog">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="19 12 5 12"/><polyline points="12 5 5 12 12 19"/></svg>
+            Blogに戻る
+        </a>
+        <div class="article-meta-info">
+            <span>2026.05.15</span>
+            <span>約7分で読める</span>
+            <span class="cat-pill cat-guide">ガイド</span>
+        </div>
     </div>
 </div>
 
@@ -465,6 +493,14 @@
         </div>
     </div>
 </section>
+
+<!-- Blogに戻るボタン -->
+<div class="wrap" style="padding-top:0;padding-bottom:48px;">
+    <a href="blog.html" class="back-blog-bottom">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="19 12 5 12"/><polyline points="12 5 5 12 12 19"/></svg>
+        Blogに戻る
+    </a>
+</div>
 
 <!-- CTA -->
 <section class="sec sec-alt">
