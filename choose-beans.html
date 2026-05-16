@@ -164,6 +164,38 @@
     .tip-item h4{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;color:var(--cream);margin-bottom:8px;}
     .tip-item p{font-size:14px;line-height:2.1;color:var(--muted);}
 
+    /* PROSE */
+    .prose{max-width:740px;}
+    .prose p{font-size:16px;line-height:2.5;color:var(--muted);margin-bottom:28px;}
+    .prose p:last-child{margin-bottom:0;}
+
+    /* ORIGIN AREA LIST */
+    .origin-area-list{display:flex;flex-direction:column;gap:2px;border-radius:20px;overflow:hidden;margin-top:40px;margin-bottom:40px;}
+    .origin-area-row{display:grid;grid-template-columns:240px 1fr;}
+    .origin-area-label{padding:32px;background:var(--bg3);display:flex;flex-direction:column;justify-content:center;gap:6px;}
+    .origin-area-region{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:var(--cream);}
+    .origin-area-countries{font-size:12px;color:var(--muted);}
+    .origin-area-body{padding:32px 40px;background:var(--card);display:flex;flex-direction:column;justify-content:center;}
+    .origin-area-body p{font-size:15px;line-height:2;color:var(--muted);}
+
+    /* ADVICE BLOCK */
+    .advice-block{background:var(--card);border-radius:16px;padding:32px 40px;border-left:3px solid var(--gold2);}
+    .advice-block p{font-size:15px;line-height:2.3;color:var(--muted);}
+    .advice-block strong{color:var(--gold2);}
+
+    /* CHOICE LIST */
+    .choice-list{display:flex;flex-direction:column;gap:2px;border-radius:20px;overflow:hidden;margin-top:40px;margin-bottom:32px;}
+    .choice-item{display:grid;grid-template-columns:200px 1fr;}
+    .choice-label{padding:32px;background:var(--bg3);font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;color:var(--cream);display:flex;align-items:center;}
+    .choice-body{padding:32px 40px;background:var(--card);}
+    .choice-verdict{font-size:15px;font-weight:700;color:var(--gold2);margin-bottom:10px;}
+    .choice-body p{font-size:14px;line-height:2.2;color:var(--muted);}
+
+    /* WARN BLOCK */
+    .warn-block{background:rgba(196,106,30,.1);border:1px solid rgba(196,106,30,.3);border-radius:16px;padding:28px 32px;}
+    .warn-label{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;color:var(--accent);margin-bottom:12px;}
+    .warn-block p{font-size:14px;line-height:2.2;color:var(--muted);}
+
     /* CTA */
     .cta-block{background:linear-gradient(135deg,#3d1c08,var(--accent));border-radius:24px;padding:64px 72px;display:flex;align-items:center;justify-content:space-between;gap:40px;overflow:hidden;}
     .cta-block h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,3vw,34px);font-weight:700;color:var(--cream);line-height:1.4;margin-bottom:10px;}
@@ -205,17 +237,21 @@
         .page-hero-inner{padding:0 24px 48px;}
         .back-top{bottom:20px;right:20px;}
         .sec{padding:72px 0;}
-        .step-grid{grid-template-columns:1fr;}
         .roast-row{grid-template-columns:1fr;}
-        .origin-mini-grid{grid-template-columns:1fr;}
-        .drink-grid{grid-template-columns:1fr;}
         .cta-block{flex-direction:column;padding:48px 36px;}
+        .origin-area-row{grid-template-columns:1fr;}
+        .choice-item{grid-template-columns:1fr;}
+        .choice-label{padding:20px 24px;}
+        .choice-body{padding:20px 24px;}
+        .origin-area-label{padding:24px;}
+        .origin-area-body{padding:24px;}
     }
     @media(max-width:600px){
         .wrap{padding:0 20px;}
         .page-hero{height:280px;}
         .sec{padding:56px 0;}
         .cta-block{padding:40px 24px;}
+        .advice-block{padding:24px 20px;}
     }
     </style>
 </head>
@@ -229,7 +265,7 @@
         <li><a href="beans.html">豆 &amp; 焙煎</a></li>
         <li><a href="brew.html">淹れ方</a></li>
         <li><a href="recommend-beans.html">おすすめ豆</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="メニュー">
         <span></span><span></span><span></span>
@@ -251,47 +287,27 @@
     </div>
 </div>
 
-<!-- ステップ概要 -->
+<!-- イントロ -->
 <section class="sec" id="intro">
     <div class="wrap">
-        <p class="label-tag sr">Step by Step</p>
-        <h2 class="h2-style sr">3ステップで見つかる<br>自分だけの一杯</h2>
-        <p class="body-text sr">コーヒー豆の世界は奥深く、選択肢が多すぎて迷ってしまう初心者の方も多いはず。でも実は「焙煎度」→「産地」→「飲み方」の3ステップで考えると、自分好みの豆がスッキリ絞り込めます。</p>
-        <div class="step-grid">
-            <div class="step-card sr d1">
-                <p class="step-num">STEP 01</p>
-                <h3>焙煎度で<br>方向性を決める</h3>
-                <p>「酸味が好き」か「苦味が好き」かを先に決めると選びやすい。浅煎りは酸味・フルーティー、深煎りは苦味・コクが特徴です。</p>
-                <div class="step-tags">
-                    <span class="badge">浅煎り</span><span class="badge">中煎り</span><span class="badge">深煎り</span>
-                </div>
-            </div>
-            <div class="step-card sr d2">
-                <p class="step-num">STEP 02</p>
-                <h3>産地で<br>風味を絞り込む</h3>
-                <p>焙煎度が決まったら産地を選びましょう。エチオピアはフルーティー、ブラジルはナッツ系、コロンビアはバランス型が定番です。</p>
-                <div class="step-tags">
-                    <span class="badge">エチオピア</span><span class="badge">ブラジル</span><span class="badge">コロンビア</span>
-                </div>
-            </div>
-            <div class="step-card sr d3">
-                <p class="step-num">STEP 03</p>
-                <h3>飲み方で<br>最終決定する</h3>
-                <p>ブラックで飲むか、ミルクや砂糖を加えるかで最適な豆は変わります。アイスコーヒー向けには深煎りが向いています。</p>
-                <div class="step-tags">
-                    <span class="badge">ブラック</span><span class="badge">カフェオレ</span><span class="badge">アイス</span>
-                </div>
-            </div>
+        <p class="label-tag sr">For Beginners</p>
+        <h2 class="h2-style sr">お店の棚の前で<br>フリーズしちゃう人へ。</h2>
+        <div class="prose sr">
+            <p>「よし、おうちで美味しいコーヒーを淹れるぞ！」そう意気込んでカルディや近所の自家焙煎店に行ってみたものの、ズラリと並んだ豆のアレコレを見て、思わずフリーズした経験はありませんか？</p>
+            <p>「エチオピア…ウォッシュド…浅煎り…えっと、どれが普通のコーヒーなの…？」ってなっちゃいますよね。パッケージの文字がまるで呪文のよう。</p>
+            <p>でも、大丈夫です。コーヒー豆選びって、実はたった3つのポイントさえ分かれば、絶対に失敗しません。コーヒー沼にどっぷりハマっている私が、初心者の方に向けて「これを選べば間違いない！」というコツを、専門用語をできるだけ使わずに語り尽くします！</p>
         </div>
     </div>
 </section>
 
-<!-- 焙煎度ガイド -->
+<!-- 焙煎度 -->
 <section class="sec sec-alt" id="roast">
     <div class="wrap">
-        <p class="label-tag sr">Roast Level</p>
-        <h2 class="h2-style sr">STEP 01 — 焙煎度で選ぶ</h2>
-        <p class="body-text sr">コーヒー豆は焙煎（加熱）することで風味が引き出されます。焙煎時間が短いほど「浅煎り」、長いほど「深煎り」になり、酸味・苦味・香りが大きく変わります。</p>
+        <p class="label-tag sr">Step 01</p>
+        <h2 class="h2-style sr">ぶっちゃけ一番大事。<br>「苦いのが好きか、酸っぱいのが好きか」</h2>
+        <div class="prose sr">
+            <p>コーヒーの味を決める最大の要素は、ぶっちゃけ国名よりも「焙煎度（ばいせんど）」、つまり豆の焼き加減です。これを間違えると、「思った味と違った…」という悲劇が起きます。まずは自分の好みがどれに当てはまるか、胸に手を当てて考えてみてください。</p>
+        </div>
         <div class="roast-guide sr">
             <div class="roast-row">
                 <div class="roast-color-col bg-light">
@@ -299,14 +315,13 @@
                     <div class="roast-en">Light Roast</div>
                 </div>
                 <div class="roast-detail-col">
-                    <p class="roast-subtitle">フルーティー &amp; 明るい酸味</p>
+                    <p class="roast-subtitle">「酸味があるフルーティーなのがいい！」な人向け</p>
                     <div class="roast-tags">
                         <span class="flavor-tag">フルーティー</span>
                         <span class="flavor-tag">花のような香り</span>
                         <span class="flavor-tag">明るい酸味</span>
-                        <span class="flavor-tag">軽やかな口当たり</span>
                     </div>
-                    <p class="roast-desc">豆本来の風味が最も鮮明に表れます。エチオピアやケニア産と相性抜群。紅茶に近い感覚で楽しめるため、「コーヒーは苦くて苦手」という方にもおすすめです。スペシャルティコーヒー専門店で人気の焙煎度です。</p>
+                    <p class="roast-desc">コーヒーの概念が変わるくらい爽やか。紅茶やフルーツティーに近い感覚です。苦いのが苦手な人はここから！</p>
                 </div>
             </div>
             <div class="roast-row">
@@ -315,14 +330,13 @@
                     <div class="roast-en">Medium Roast</div>
                 </div>
                 <div class="roast-detail-col">
-                    <p class="roast-subtitle">バランス型 — 初心者に最もおすすめ</p>
+                    <p class="roast-subtitle">「ザ・王道。苦味も酸味も普通がいい」な人向け</p>
                     <div class="roast-tags">
                         <span class="flavor-tag">キャラメル</span>
                         <span class="flavor-tag">ナッツ</span>
-                        <span class="flavor-tag">マイルドな酸味</span>
                         <span class="flavor-tag">やわらかな甘み</span>
                     </div>
-                    <p class="roast-desc">酸味と苦味がバランスよく共存。缶コーヒーやカフェのブレンドに多い焙煎度で、初めてスペシャルティコーヒーに挑戦する方に最適です。ブラックでも、ミルクと合わせても楽しめます。</p>
+                    <p class="roast-desc">喫茶店で出てくるような、ホッとするあの味です。迷ったらひとまずこれを選べば間違いありません。</p>
                 </div>
             </div>
             <div class="roast-row">
@@ -331,139 +345,123 @@
                     <div class="roast-en">Dark Roast</div>
                 </div>
                 <div class="roast-detail-col">
-                    <p class="roast-subtitle">コク &amp; 苦味のどっしり系</p>
+                    <p class="roast-subtitle">「ガツンと苦くてコクがあるのが好き！」な人向け</p>
                     <div class="roast-tags">
                         <span class="flavor-tag">ダークチョコレート</span>
                         <span class="flavor-tag">スモーキー</span>
                         <span class="flavor-tag">力強い苦味</span>
-                        <span class="flavor-tag">重厚なコク</span>
                     </div>
-                    <p class="roast-desc">苦味とコクが最大限に引き出されます。エスプレッソやアイスコーヒー向き。ミルクや砂糖と合わせてもしっかりコーヒーの主張が残るため、カフェオレ・カフェラテにも最適です。</p>
+                    <p class="roast-desc">チョコレートのような香ばしさ。ミルクを入れてカフェオレにしたい人や、仕事中にシャキッとしたい人は絶対これ。</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 産地ガイド -->
+<!-- 産地 -->
 <section class="sec" id="origin">
     <div class="wrap">
-        <p class="label-tag sr">Origin Guide</p>
-        <h2 class="h2-style sr">STEP 02 — 産地で選ぶ</h2>
-        <p class="body-text sr">産地によってコーヒーの風味は大きく異なります。同じ焙煎度でも、産地が違えばまったく違う味に。まずは代表的な4産地を覚えましょう。</p>
-        <div class="origin-mini-grid">
-            <div class="origin-mini-card sr d1">
-                <div class="origin-wm">ET</div>
-                <p class="origin-mini-num">01 — AFRICA</p>
-                <h3>エチオピア</h3>
-                <p>コーヒー発祥の地。ブルーベリー・ジャスミンのような華やかな果実感が特徴。浅煎りで飲むと最も個性が際立ちます。</p>
-                <div class="origin-mini-tags">
-                    <span class="badge">ブルーベリー</span><span class="badge">フローラル</span><span class="badge">浅煎り向き</span>
+        <p class="label-tag sr">Step 02</p>
+        <h2 class="h2-style sr">4大エリアの特徴を<br>なんとなく知っておく</h2>
+        <div class="prose sr">
+            <p>焼き加減のイメージがついたら、次は「産地（国）」です。世界中で作られているコーヒーですが、ざっくり4つのエリアで味が全然違います。人間の性格くらい個性的です。</p>
+        </div>
+        <div class="origin-area-list sr">
+            <div class="origin-area-row">
+                <div class="origin-area-label">
+                    <span class="origin-area-region">アフリカ</span>
+                    <span class="origin-area-countries">エチオピア、ケニアなど</span>
+                </div>
+                <div class="origin-area-body">
+                    <p>フルーティーで華やか。「これコーヒー！？」って驚くオシャレな味。</p>
+                    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:12px;">
+                        <span class="badge">フルーティー</span><span class="badge">個性派</span><span class="badge">浅煎り向き</span>
+                    </div>
                 </div>
             </div>
-            <div class="origin-mini-card sr d2">
-                <div class="origin-wm">BR</div>
-                <p class="origin-mini-num">02 — SOUTH AMERICA</p>
-                <h3>ブラジル</h3>
-                <p>世界最大の生産国。チョコレート・ナッツ系の甘みが特徴で、くせが少なく飲みやすい。中〜深煎りで真価を発揮します。</p>
-                <div class="origin-mini-tags">
-                    <span class="badge">チョコレート</span><span class="badge">アーモンド</span><span class="badge">飲みやすい</span>
+            <div class="origin-area-row">
+                <div class="origin-area-label">
+                    <span class="origin-area-region">中南米</span>
+                    <span class="origin-area-countries">ブラジル、コロンビアなど</span>
+                </div>
+                <div class="origin-area-body">
+                    <p>優等生。ナッツやチョコみたいな安心感があって、毎日飲んでも飽きない。</p>
+                    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:12px;">
+                        <span class="badge">チョコ・ナッツ</span><span class="badge">飲みやすい</span><span class="badge">初心者向き</span>
+                    </div>
                 </div>
             </div>
-            <div class="origin-mini-card sr d3">
-                <div class="origin-wm">CO</div>
-                <p class="origin-mini-num">03 — SOUTH AMERICA</p>
-                <h3>コロンビア</h3>
-                <p>さわやかな柑橘系酸味とまろやかなコクが絶妙にバランス。中煎りで飲むのが一般的で、初心者にも非常におすすめ。</p>
-                <div class="origin-mini-tags">
-                    <span class="badge">柑橘系</span><span class="badge">バランス型</span><span class="badge">初心者向き</span>
+            <div class="origin-area-row">
+                <div class="origin-area-label">
+                    <span class="origin-area-region">アジア</span>
+                    <span class="origin-area-countries">インドネシア（マンデリン）など</span>
+                </div>
+                <div class="origin-area-body">
+                    <p>どっしり力強い苦味。ハーブやスパイスのような独特なコクがクセになる。</p>
+                    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:12px;">
+                        <span class="badge">力強い</span><span class="badge">スパイシー</span><span class="badge">深煎り向き</span>
+                    </div>
                 </div>
             </div>
-            <div class="origin-mini-card sr d4">
-                <div class="origin-wm">GT</div>
-                <p class="origin-mini-num">04 — CENTRAL AMERICA</p>
-                <h3>グアテマラ</h3>
-                <p>スパイシーかつフルーティーな複雑な風味。チョコレートやカラメルのニュアンスもあり、ブラックでじっくり味わいたい一杯。</p>
-                <div class="origin-mini-tags">
-                    <span class="badge">スパイシー</span><span class="badge">カラメル</span><span class="badge">複雑な風味</span>
+            <div class="origin-area-row">
+                <div class="origin-area-label">
+                    <span class="origin-area-region">ハワイ・カリブ</span>
+                    <span class="origin-area-countries">ブルーマウンテンなど</span>
+                </div>
+                <div class="origin-area-body">
+                    <p>すっきりして上品。雑味がなくて、とにかく飲みやすい（ちょっとお高め）。</p>
+                    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:12px;">
+                        <span class="badge">上品</span><span class="badge">飲みやすい</span><span class="badge">プレミアム</span>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="advice-block sr">
+            <p>迷いすぎて頭が痛くなってきたあなたへ。「とにかく普通に美味しくて、飲みやすいやつ！」と思ったら、何も言わずに<strong>「ブラジルの中煎り」</strong>を買ってみてください。日本のコーヒーのベースになっている味なので、絶対にハズレません。</p>
         </div>
     </div>
 </section>
 
-<!-- 飲み方別おすすめ -->
-<section class="sec sec-alt" id="drink">
+<!-- 豆か粉か -->
+<section class="sec sec-alt" id="form">
     <div class="wrap">
-        <p class="label-tag sr">By Drink Style</p>
-        <h2 class="h2-style sr">STEP 03 — 飲み方で選ぶ</h2>
-        <p class="body-text sr">同じ豆でも飲み方によって最適な焙煎度・産地は変わります。普段どんなスタイルでコーヒーを楽しんでいるかを基準に選んでみましょう。</p>
-        <div class="drink-grid">
-            <div class="drink-card sr d1">
-                <div class="drink-icon">☕</div>
-                <h3>ブラックで飲む</h3>
-                <p>豆の風味をダイレクトに楽しめるのがブラックの醍醐味。浅〜中煎りで香りの豊かな豆を選ぶと、複雑な味わいが堪能できます。</p>
-                <div class="drink-rec">
-                    <p class="drink-rec-label">おすすめ</p>
-                    <p class="drink-rec-val">浅煎り〜中煎り × エチオピア・コロンビア</p>
+        <p class="label-tag sr">Step 03</p>
+        <h2 class="h2-style sr">「豆」で買う？<br>「粉」で買う？</h2>
+        <div class="prose sr">
+            <p>欲しい豆が決まったら、最後にレジで「豆のままですか？挽きますか？」と聞かれます。</p>
+        </div>
+        <div class="choice-list sr">
+            <div class="choice-item">
+                <div class="choice-label">家にミルがない人</div>
+                <div class="choice-body">
+                    <p class="choice-verdict">迷わず「粉で！」と言ってください。</p>
+                    <p>お店の人がペーパードリップに最適な細さにビューンと挽いてくれます。手軽さが一番です。</p>
                 </div>
             </div>
-            <div class="drink-card sr d2">
-                <div class="drink-icon">🥛</div>
-                <h3>ミルク・砂糖を入れる</h3>
-                <p>ミルクに負けないコーヒーの主張が欲しければ深煎り。カフェオレやカフェラテには、苦味とコクがしっかりした深煎りブレンドが最高です。</p>
-                <div class="drink-rec">
-                    <p class="drink-rec-label">おすすめ</p>
-                    <p class="drink-rec-val">中〜深煎り × ブラジル・ブレンド豆</p>
+            <div class="choice-item">
+                <div class="choice-label">形から入りたい人</div>
+                <div class="choice-body">
+                    <p class="choice-verdict">道具を揃えて「豆のまま」買いましょう。</p>
+                    <p>飲む直前に自分で挽くコーヒーの香りは、マジで飛ぶほど良い匂いです。部屋中がカフェになります。</p>
                 </div>
             </div>
-            <div class="drink-card sr d3">
-                <div class="drink-icon">🧊</div>
-                <h3>アイスコーヒーにする</h3>
-                <p>氷で薄まることを前提に、深煎りで濃く抽出するのが基本。深煎りの苦味とコクはアイスにしても際立ち、後味がすっきりします。</p>
-                <div class="drink-rec">
-                    <p class="drink-rec-label">おすすめ</p>
-                    <p class="drink-rec-val">深煎り × ブラジル・グアテマラ</p>
-                </div>
-            </div>
+        </div>
+        <div class="warn-block sr">
+            <p class="warn-label">⚠️ これだけは約束してほしいこと</p>
+            <p>コーヒーは粉にすると、一気に寿命が縮まります（酸化して味が落ちちゃうんです）。なので、いくらお得だからと言って大袋でドカンと買うのはNG。「2週間くらいで飲みきれる量（100g〜200g）」を、こまめに買うのが美味しく飲む最大のヒントです！</p>
         </div>
     </div>
 </section>
 
-<!-- 鮮度と保存のコツ -->
-<section class="sec" id="freshness">
+<!-- おわりに -->
+<section class="sec" id="ending">
     <div class="wrap">
-        <p class="label-tag sr">Freshness Tips</p>
-        <h2 class="h2-style sr">美味しさを保つ<br>鮮度と保存の基本</h2>
-        <div class="tips-list">
-            <div class="tip-item sr d1">
-                <div class="tip-num">01</div>
-                <div>
-                    <h4>焙煎から2〜4週間以内に飲み切る</h4>
-                    <p>コーヒー豆は焙煎直後から酸化が進みます。目安は焙煎後2〜4週間。袋に「焙煎日」が記載されたものを選ぶと鮮度管理がしやすく、専門店で購入するのがおすすめです。</p>
-                </div>
-            </div>
-            <div class="tip-item sr d2">
-                <div class="tip-num">02</div>
-                <div>
-                    <h4>豆のまま買って、飲む直前に挽く</h4>
-                    <p>粉に挽いた瞬間から酸化が一気に加速します。豆のまま購入して、飲む直前にミルで挽くだけで香りと風味が格段にアップ。手動ミルでも十分です。</p>
-                </div>
-            </div>
-            <div class="tip-item sr d3">
-                <div class="tip-num">03</div>
-                <div>
-                    <h4>密閉容器に入れ、直射日光・高温多湿を避ける</h4>
-                    <p>コーヒーの天敵は「空気・光・熱・水分」の4つ。ジップ付き袋や密閉缶に入れ、冷暗所で保存しましょう。冷凍保存する場合は小分けにして、解凍後は再冷凍しないことが重要です。</p>
-                </div>
-            </div>
-            <div class="tip-item sr d4">
-                <div class="tip-num">04</div>
-                <div>
-                    <h4>まずは100g単位の少量から試す</h4>
-                    <p>初めて試す豆は100g〜200gの小パックから。どんなに評判が良くても、自分の好みに合わない場合があります。少量で試して気に入ったら大容量を購入するのが賢い選び方です。</p>
-                </div>
-            </div>
+        <p class="label-tag sr">おわりに</p>
+        <h2 class="h2-style sr">コーヒー選びに<br>「正解」なんてない！</h2>
+        <div class="prose sr">
+            <p>長々と語ってしまいましたが、一番大切なのは「あなたの直感」です。「なんかパッケージのデザインが可愛いな」「エチオピアって響きがなんか好き」「お店の人がおすすめって言ってたし」。最初はそんな理由で選んで全然オッケーです。</p>
+            <p>色んな豆を試していくうちに、「あ、私は中南米の豆が好きなんだな」とか「疲れてる時は深煎りが染みるな」って、自分の好みがわかってくるのが最高に楽しいんです。難しく考えず、まずは宝探しのような気分で、気になる1袋を手に取ってみてくださいね。</p>
+            <p>あなたのコーヒーライフが、素敵なものになりますように！</p>
         </div>
     </div>
 </section>
@@ -473,8 +471,8 @@
     <div class="wrap">
         <div class="cta-block sr">
             <div>
-                <h2>選び方がわかったら<br>実際に試してみよう</h2>
-                <p>編集部が厳選したおすすめコーヒー豆6選。初心者からコアなファンまで満足できる豆を揃えています。</p>
+                <h2>気になる豆があれば、<br>まず試してみよう。</h2>
+                <p>失敗したくない方のために、実際に飲んで選んだ豆だけを載せています。ここから始めれば間違いありません。</p>
             </div>
             <a href="recommend-beans.html" class="btn-fill">
                 おすすめ豆6選を見る
@@ -504,11 +502,11 @@
             <div class="footer-col">
                 <h4>このページ</h4>
                 <ul>
-                    <li><a href="#intro">3ステップで選ぶ</a></li>
+                    <li><a href="#intro">はじめに</a></li>
                     <li><a href="#roast">焙煎度で選ぶ</a></li>
                     <li><a href="#origin">産地で選ぶ</a></li>
-                    <li><a href="#drink">飲み方で選ぶ</a></li>
-                    <li><a href="#freshness">鮮度と保存</a></li>
+                    <li><a href="#form">豆か粉か</a></li>
+                    <li><a href="#ending">おわりに</a></li>
                 </ul>
             </div>
         </div>

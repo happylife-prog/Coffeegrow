@@ -206,6 +206,45 @@
     .footer-col ul li a:hover{color:var(--gold2);}
     .footer-bottom{text-align:center;font-size:12px;letter-spacing:.04em;}
 
+    /* ARTICLE META BAR */
+    .article-meta-bar{background:var(--bg2);border-bottom:1px solid var(--border);padding:18px 0;}
+    .article-meta-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;}
+    .back-blog{font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:inline-flex;align-items:center;gap:8px;transition:color .25s;}
+    .back-blog:hover{color:var(--gold2);}
+    .back-blog svg{width:14px;height:14px;flex-shrink:0;}
+    .article-meta-info{display:flex;align-items:center;gap:16px;font-family:'Poppins',sans-serif;font-size:11px;color:rgba(245,236,224,.3);letter-spacing:.06em;}
+    .cat-pill{font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 12px;border-radius:50px;}
+    .cat-review{background:rgba(80,120,200,.18);color:#a0b8f0;border:1px solid rgba(80,120,200,.3);}
+
+    /* ARTICLE CONTENT */
+    .article-wrap{max-width:860px;}
+    .article-wrap .section-h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,3vw,34px);font-weight:700;line-height:1.3;letter-spacing:-.02em;color:var(--cream);margin-bottom:28px;margin-top:64px;padding-top:56px;border-top:1px solid var(--border);}
+    .article-wrap .section-h2.no-border{border-top:none;padding-top:0;margin-top:0;}
+    .article-wrap .section-h3{font-family:'Space Grotesk',sans-serif;font-size:clamp(17px,2vw,22px);font-weight:700;color:var(--cream);margin-bottom:18px;margin-top:44px;}
+
+    /* PROSE */
+    .prose p{font-size:16px;line-height:2.5;color:var(--muted);margin-bottom:24px;}
+    .prose p:last-child{margin-bottom:0;}
+
+    /* TASTING POINTS */
+    .tasting-points{display:flex;flex-direction:column;gap:2px;border-radius:16px;overflow:hidden;margin:32px 0;}
+    .tasting-point{background:var(--card);padding:28px 32px;border-left:3px solid var(--gold2);}
+    .tasting-label{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;color:var(--gold2);display:block;margin-bottom:10px;}
+    .tasting-point p{font-size:14px;line-height:2.1;color:var(--muted);}
+
+    /* REC LIST */
+    .rec-list{display:flex;flex-direction:column;gap:2px;border-radius:16px;overflow:hidden;margin-top:32px;}
+    .rec-item{display:grid;grid-template-columns:60px 1fr;background:var(--card);}
+    .rec-num{display:flex;align-items:center;justify-content:center;background:var(--bg3);font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:var(--gold2);padding:20px 0;}
+    .rec-body{padding:24px 32px;}
+    .rec-name{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:var(--cream);margin-bottom:10px;}
+    .rec-body > p{font-size:14px;line-height:2.1;color:var(--muted);}
+
+    /* BACK TO BLOG BTN (bottom) */
+    .back-blog-bottom{display:inline-flex;align-items:center;gap:10px;font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 28px;border-radius:50px;border:1px solid var(--border);color:var(--muted);transition:border-color .25s,color .25s,transform .25s;}
+    .back-blog-bottom:hover{border-color:var(--gold2);color:var(--gold2);transform:translateX(-4px);}
+    .back-blog-bottom svg{width:14px;height:14px;}
+
     /* BACK TO TOP */
     .back-top{position:fixed;bottom:32px;right:32px;width:48px;height:48px;background:var(--accent);color:var(--cream);border:none;border-radius:50%;cursor:pointer;z-index:99;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(16px);transition:opacity .4s,transform .4s,background .25s;box-shadow:0 4px 20px rgba(196,106,30,.4);}
     .back-top.v{opacity:1;transform:translateY(0);}
@@ -254,8 +293,8 @@
         <li><a href="index.html">Top</a></li>
         <li><a href="beans.html">豆 &amp; 焙煎</a></li>
         <li><a href="brew.html">淹れ方</a></li>
-        <li><a href="recommend-beans.html" class="active">おすすめ豆</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="recommend-beans.html">おすすめ豆</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="メニュー">
         <span></span><span></span><span></span>
@@ -277,52 +316,104 @@
     </div>
 </div>
 
-<!-- ブランド概要 -->
-<section class="sec" id="about">
+<!-- 記事メタバー -->
+<div class="article-meta-bar">
     <div class="wrap">
-        <p class="label-tag sr">About Café Verdi</p>
-        <h2 class="h2-style sr">カフェヴェルディとは</h2>
-        <div class="overview-grid">
-            <div class="overview-img sr d1">
-                <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80" alt="スペシャルティコーヒー豆" loading="lazy">
+        <a href="blog.html" class="back-blog">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="19 12 5 12"/><polyline points="12 5 5 12 12 19"/></svg>
+            Blogに戻る
+        </a>
+        <div class="article-meta-info">
+            <span>2026.05.15</span>
+            <span>約6分で読める</span>
+            <span class="cat-pill cat-review">レビュー</span>
+        </div>
+    </div>
+</div>
+
+<!-- イントロ + ブランド紹介 -->
+<section class="sec" id="intro">
+    <div class="wrap">
+        <div class="article-wrap">
+            <div class="prose sr">
+                <p>珈琲の激戦区であり、独自の喫茶文化が深く根付く街・京都。その地で「本当に美味しい珈琲を出す」と全国の愛好家から一目置かれているのが、スペシャルティコーヒーロースター「カフェヴェルディ（Café Verdi）」です。</p>
+                <p>今回は、お店の味がそのまま自宅に届くオンラインショップ（通販）を実際に利用し、そのクオリティや焙煎のこだわり、おすすめの豆までを徹底的に本音でレビューします！</p>
             </div>
-            <div class="overview-body sr d2">
-                <p style="font-size:16px;line-height:2.3;color:var(--muted);margin-bottom:32px;">カフェヴェルディは京都に拠点を置くスペシャルティコーヒーのロースター。産地・農園・精製方法にこだわり抜いたシングルオリジン豆と、独自のブレンド技術で作る看板ブレンドが高い評価を得ています。</p>
-                <p style="font-size:16px;line-height:2.3;color:var(--muted);margin-bottom:40px;">「ヴェルディ（Verdi）」はイタリア語で「緑」。コーヒー生産地の豊かな緑を大切にするというブランドの哲学が名前に込められています。</p>
-                <div class="overview-meta">
-                    <div class="meta-row">
-                        <span class="meta-key">ジャンル</span>
-                        <span class="meta-val">スペシャルティコーヒー 自家焙煎</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">拠点</span>
-                        <span class="meta-val">京都</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">焙煎スタイル</span>
-                        <span class="meta-val">中焙煎〜中深焙煎</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-key">通販</span>
-                        <span class="meta-val">楽天・公式サイトで購入可能</span>
+
+            <h2 class="section-h2 no-border sr">「カフェヴェルディ」ってどんなブランド？</h2>
+            <div class="prose sr">
+                <p>レビューに入る前に、まずこのロースターの哲学がとにかく素敵なのでご紹介させてください。</p>
+                <p>ブランド名にある「ヴェルディ（Verdi）」は、イタリア語で「緑」を意味します。これは、ただのお洒落な響きで付けられたわけではありません。コーヒーの原点である「生産地の豊かな緑と自然を大切にする」という、実直で深いリスペクトが込められているのです。</p>
+                <p>カフェヴェルディの最大の特徴は、その徹底したこだわり。世界中のコーヒー生産地から厳選されたトップクオリティの豆を扱い、さらに「農園」や「精製方法（ウォッシュドやナチュラルなど）」にまで細かくスポットを当てて買い付けを行っています。それを独自の焙煎技術で磨き上げ、シングルオリジンはもちろん、計算し尽くされた看板ブレンドとして私たちに届けてくれます。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 実際に届いた豆レビュー -->
+<section class="sec sec-alt" id="review">
+    <div class="wrap">
+        <div class="article-wrap">
+            <h2 class="section-h2 no-border sr">実際に届いた豆をレビュー：<br>徹底的な「クリーンさ」に感動</h2>
+            <div class="prose sr">
+                <p>今回は、通販でシングルオリジンと看板のブレンドをいくつかお取り寄せしました。パッケージを開けた瞬間に、部屋いっぱいに広がる香ばしく甘い香りに早くも大興奮。</p>
+            </div>
+
+            <h3 class="section-h3 sr">驚くほど綺麗な「豆の表情」</h3>
+            <div class="prose sr">
+                <p>袋から豆を取り出して驚いたのは、その美しさです。割れた豆や未熟な豆などの「欠点豆」がほとんど見当たりません。焙煎前後に徹底してハンドピック（手作業での選別）を行っていることが一目でわかります。この丁寧な仕事が、濁りのないクリアな味わいに直結しているのだと実感します。</p>
+            </div>
+
+            <h3 class="section-h3 sr">淹れてみて分かった味の傾向</h3>
+            <div class="prose sr">
+                <p>お湯を注ぐと、炭酸ガスで粉がぷっくりと綺麗に膨らみます。これは豆が極めて新鮮である証拠。実際に口に含むと、次のような感動がありました。</p>
+            </div>
+            <div class="tasting-points sr">
+                <div class="tasting-point">
+                    <span class="tasting-label">圧倒的な透明感</span>
+                    <p>喉を通ったあとに嫌な苦味やエグみが全く残らず、すっと消えていくクリーンさ。</p>
+                </div>
+                <div class="tasting-point">
+                    <span class="tasting-label">産地ごとの「輪郭」がくっきり</span>
+                    <p>「エチオピアならレモングラスのような華やかさ」「ブラジルなら上質なナッツの香ばしさ」というように、豆の個性がボヤけず鮮明に伝わります。</p>
+                </div>
+                <div class="tasting-point">
+                    <span class="tasting-label">冷めても美味しい</span>
+                    <p>本当に良いコーヒーは冷めてから甘みが引き立ちますが、ヴェルディのコーヒーはまさにそれ。最後まで贅沢な余韻を楽しめます。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- おすすめの豆 -->
+<section class="sec" id="recommend">
+    <div class="wrap">
+        <div class="article-wrap">
+            <h2 class="section-h2 no-border sr">カフェヴェルディで買うべき<br>「おすすめの豆」</h2>
+            <div class="prose sr">
+                <p>通販サイトのメニューを見ながら迷ってしまったら、まずはここから試すのがおすすめです。</p>
+            </div>
+            <div class="rec-list sr">
+                <div class="rec-item">
+                    <div class="rec-num">01</div>
+                    <div class="rec-body">
+                        <p class="rec-name">ヴェルディ・ブレンド（看板ブレンド / 中深煎り）</p>
+                        <p>お店のシグネチャー。酸味と苦味のバランスがこれ以上ないほど完璧。毎日飲んでも絶対に飽きない、上品でコクのある王道の味わいです。</p>
                     </div>
                 </div>
-                <div class="score-row">
-                    <div class="score-item">
-                        <div class="score-circle">4.5</div>
-                        <span class="score-label">総合評価</span>
+                <div class="rec-item">
+                    <div class="rec-num">02</div>
+                    <div class="rec-body">
+                        <p class="rec-name">シングルオリジン（エチオピアなど / 浅煎り〜中煎り）</p>
+                        <p>まるで完熟したフルーツや、淹れたての紅茶を思わせる華やかな香り。フルーティーな酸味がお好きな方は感動すること間違いなしです。</p>
                     </div>
-                    <div class="score-item">
-                        <div class="score-circle">5.0</div>
-                        <span class="score-label">香り</span>
-                    </div>
-                    <div class="score-item">
-                        <div class="score-circle">4.5</div>
-                        <span class="score-label">味わい</span>
-                    </div>
-                    <div class="score-item">
-                        <div class="score-circle">4.0</div>
-                        <span class="score-label">コスパ</span>
+                </div>
+                <div class="rec-item">
+                    <div class="rec-num">03</div>
+                    <div class="rec-body">
+                        <p class="rec-name">深煎りブレンド / マンデリン（深煎り）</p>
+                        <p>ただ苦いだけじゃない、ビターチョコレートのような甘みを伴う重厚なコク。ミルクとの相性も抜群で、贅沢なカフェオレが作れます。</p>
                     </div>
                 </div>
             </div>
@@ -330,129 +421,45 @@
     </div>
 </section>
 
-<!-- 人気商品ラインナップ -->
-<section class="sec sec-alt" id="lineup">
+<!-- メリット・デメリット + 総評 -->
+<section class="sec sec-alt" id="verdict">
     <div class="wrap">
-        <p class="label-tag sr">Product Lineup</p>
-        <h2 class="h2-style sr">人気商品ラインナップ</h2>
-        <p class="body-text sr">カフェヴェルディの看板商品から、編集部がとくに注目する3アイテムを紹介します。</p>
-        <div class="product-stack">
-
-            <div class="product-card sr d1">
-                <div class="product-img-col">
-                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=500&q=80" alt="ヴェルディブレンド コーヒー豆" loading="lazy">
+        <div class="article-wrap">
+            <h2 class="section-h2 no-border sr">通販を利用して感じた<br>「メリットと注意点」</h2>
+            <div class="prose sr">
+                <p>実際に購入・体験してみて感じた、リアルな良い点と惜しい点をまとめました。</p>
+            </div>
+            <div class="pros-cons sr">
+                <div class="pros">
+                    <h4>👍 ここが最高！</h4>
+                    <ul class="pros-list">
+                        <li>京都のレジェンド級の味を、並ばずに自宅でゆっくり楽しめる</li>
+                        <li>焙煎したての超新鮮な状態で発送されるため、香りの立ち方が段違い</li>
+                        <li>シングルオリジンの説明が丁寧で、産地や農園のストーリーを感じながら飲める</li>
+                        <li>豆のまま / 粉の細さを細かく指定できるので、手持ちの器具に合わせやすい</li>
+                    </ul>
                 </div>
-                <div class="product-body">
-                    <p class="product-num">01 — SIGNATURE BLEND</p>
-                    <h3>ヴェルディブレンド</h3>
-                    <p class="product-sub">中深煎り / 100g</p>
-                    <div class="product-bar"></div>
-                    <p>看板ブレンド。中南米・アフリカ産の豆を組み合わせたバランス型で、チョコレートの甘みとほのかな柑橘の酸味が絶妙に融合。ブラックでもミルクと合わせても楽しめる万能な一杯です。</p>
-                    <div class="product-tags">
-                        <span class="tag-roast">チョコレート</span>
-                        <span class="tag-roast">柑橘系酸味</span>
-                        <span class="tag-roast">万能型</span>
-                        <span class="tag-roast">初心者OK</span>
-                    </div>
+                <div class="cons">
+                    <h4>⚠️ ここは注意！</h4>
+                    <ul class="cons-list">
+                        <li>注文が集中すると発送まで数日かかる場合がある（余裕を持った注文が吉）</li>
+                        <li>スーパーの市販品に比べると価格は高め（クオリティを考えればコスパは非常に高い）</li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="product-card sr d2">
-                <div class="product-img-col">
-                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=500&q=80" alt="下鴨ブレンド コーヒー豆" loading="lazy">
-                </div>
-                <div class="product-body">
-                    <p class="product-num">02 — SHIMOGAMO BLEND</p>
-                    <h3>下鴨ブレンド</h3>
-                    <p class="product-sub">深煎り / 100g</p>
-                    <div class="product-bar"></div>
-                    <p>下鴨神社の緑をイメージして作られた深煎りブレンド。力強いコクと苦味の中に、柔らかな甘みが溶け込んでいます。エスプレッソや、ミルクたっぷりのカフェオレに特におすすめ。</p>
-                    <div class="product-tags">
-                        <span class="tag-roast">深煎り</span>
-                        <span class="tag-roast">濃厚なコク</span>
-                        <span class="tag-roast">カフェオレ向き</span>
-                    </div>
-                </div>
+            <h2 class="section-h2 sr">総評：おうちコーヒーを<br>「特別な時間」に変えてくれる名店</h2>
+            <div class="prose sr">
+                <p>カフェヴェルディの通販は、単に「コーヒー豆を買い求める」という行為を超えて、「おうちの中に最高峰の京都の喫茶店を引っ張ってくる」ような贅沢な体験をさせてくれます。</p>
+                <p>生産地の「緑（Verdi）」に想いを馳せながら、丁寧にハンドピックされた美しい豆をドリップする時間。それ自体が最高の癒やしになります。</p>
+                <p>「いつもよりちょっと良い豆で、丁寧な休日を過ごしたい」「大切な人にハズさないコーヒーギフトを贈りたい」そんな方は、ぜひカフェヴェルディのオンラインショップを覗いてみてください。きっと、あなたのコーヒー観が変わるような、運命の1杯に出会えるはずです。</p>
             </div>
 
-            <div class="product-card sr d3">
-                <div class="product-img-col">
-                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=500&q=80" alt="スカルピアの悪だくみブレンド" loading="lazy">
-                </div>
-                <div class="product-body">
-                    <p class="product-num">03 — SCARPIA BLEND</p>
-                    <h3>スカルピアの悪だくみブレンド</h3>
-                    <p class="product-sub">中深煎り / 100g</p>
-                    <div class="product-bar"></div>
-                    <p>歌劇「トスカ」の悪役スカルピアにインスパイアされた個性的なブレンド。ダークベリーとスモーキーなニュアンスが複雑に絡み合う、ドラマチックな味わい。コーヒー好きにこそ試してほしい一品。</p>
-                    <div class="product-tags">
-                        <span class="tag-roast">ダークベリー</span>
-                        <span class="tag-roast">スモーキー</span>
-                        <span class="tag-roast">個性派</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- 実際に飲んでみた評価 -->
-<section class="sec" id="review">
-    <div class="wrap">
-        <p class="label-tag sr">Tasting Notes</p>
-        <h2 class="h2-style sr">実際に飲んでみた<br>編集部レビュー</h2>
-        <p class="body-text sr">編集部でヴェルディブレンドと下鴨ブレンドを実際に購入し、ハンドドリップで試飲。詳細な評価をお伝えします。</p>
-
-        <div class="review-block sr">
-            <h3>ヴェルディブレンド（中深煎り）評価</h3>
-            <div class="review-criteria">
-                <div class="review-row">
-                    <span class="review-label">香り</span>
-                    <div class="review-bar-wrap"><div class="review-bar-fill" style="width:96%"></div></div>
-                    <span class="review-score">4.8</span>
-                </div>
-                <div class="review-row">
-                    <span class="review-label">酸味のバランス</span>
-                    <div class="review-bar-wrap"><div class="review-bar-fill" style="width:90%"></div></div>
-                    <span class="review-score">4.5</span>
-                </div>
-                <div class="review-row">
-                    <span class="review-label">コク・甘み</span>
-                    <div class="review-bar-wrap"><div class="review-bar-fill" style="width:88%"></div></div>
-                    <span class="review-score">4.4</span>
-                </div>
-                <div class="review-row">
-                    <span class="review-label">後味・余韻</span>
-                    <div class="review-bar-wrap"><div class="review-bar-fill" style="width:92%"></div></div>
-                    <span class="review-score">4.6</span>
-                </div>
-                <div class="review-row">
-                    <span class="review-label">コスパ</span>
-                    <div class="review-bar-wrap"><div class="review-bar-fill" style="width:82%"></div></div>
-                    <span class="review-score">4.1</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="pros-cons sr" style="margin-top:0;">
-            <div class="pros">
-                <h4>良かった点</h4>
-                <ul class="pros-list">
-                    <li>開封した瞬間の香りが圧倒的。チョコと花のような複雑な香り</li>
-                    <li>酸味・苦味・甘みのバランスが絶妙で飲み飽きない</li>
-                    <li>冷めてもおいしく、味が崩れにくい</li>
-                    <li>200g・400gの大容量も選べてまとめ買いに便利</li>
-                    <li>楽天で定期購入できるため、切らさず入手しやすい</li>
-                </ul>
-            </div>
-            <div class="cons">
-                <h4>気になった点</h4>
-                <ul class="cons-list">
-                    <li>100g あたりの価格はやや高め（スペシャルティ価格帯）</li>
-                    <li>浅煎りが好きな人には物足りない場合も</li>
-                    <li>人気商品は在庫切れになることがある</li>
-                </ul>
+            <div class="sr" style="margin-top:48px;">
+                <a href="blog.html" class="back-blog-bottom">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="19 12 5 12"/><polyline points="12 5 5 12 12 19"/></svg>
+                    Blogに戻る
+                </a>
             </div>
         </div>
     </div>
@@ -468,10 +475,7 @@
         <div class="rank-a8-body sr d1">
             <div class="rank-a8-num-col"><span class="rank-num">01</span></div>
             <div class="rank-a8-photo-col">
-                <!-- ここにA8のスクリプトを貼り付けてください（ヴェルディブレンド） -->
-                <span class="a8ad" style="flex:1;display:flex;align-items:center;justify-content:center;padding:14px;font-size:14px;color:var(--muted);">
-                    [A8アフィリエイト広告エリア]
-                </span>
+                <span class="a8ad 4Am2PcQ-g7-vj27Te8"></span>
                 <div class="a8-link-badge">商品ページへ →</div>
             </div>
             <div class="rank-a8-info-col">
@@ -488,10 +492,7 @@
         <div class="rank-a8-body sr d2">
             <div class="rank-a8-num-col"><span class="rank-num">02</span></div>
             <div class="rank-a8-photo-col">
-                <!-- ここにA8のスクリプトを貼り付けてください（下鴨ブレンド） -->
-                <span class="a8ad" style="flex:1;display:flex;align-items:center;justify-content:center;padding:14px;font-size:14px;color:var(--muted);">
-                    [A8アフィリエイト広告エリア]
-                </span>
+                <span class="a8ad 4Am2PcQ-g7-vj2cDTg"></span>
                 <div class="a8-link-badge">商品ページへ →</div>
             </div>
             <div class="rank-a8-info-col">
@@ -503,6 +504,14 @@
                 </div>
             </div>
         </div>
+
+        <!-- A8 product scripts -->
+        <script type="text/javascript" src="//statics.a8.net/ad/ad.js"></script>
+        <script type="text/javascript">
+        a8adscript('body').showAd({"req":{"mat":"4B3KUT+2WSB8Y+5QM2+BWGDT","alt":"商品リンク","id":"4Am2PcQ-g7-vj27Te8"},"goods":{"ejp":"h"+"ttps://shopping.verdi.jp/view/item/000000000090?category_page_id=ct10","imu":"h"+"ttps://makeshop-multi-images.akamaized.net/caffeVerdi/shopimages/90/00/1_000000000090.jpg?1728274952"}});
+        a8adscript('body').showAd({"req":{"mat":"4B3KUT+2WSB8Y+5QM2+BWGDT","alt":"商品リンク","id":"4Am2PcQ-g7-vj2cDTg"},"goods":{"ejp":"h"+"ttps://shopping.verdi.jp/view/item/000000000126?category_page_id=ct10","imu":"h"+"ttps://makeshop-multi-images.akamaized.net/caffeVerdi/shopimages/26/01/2_000000000126.jpg?1678209904"}});
+        </script>
+        <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3KUT+2WSB8Y+5QM2+5YZ75" alt="" style="display:none;">
     </div>
 </div>
 
@@ -511,8 +520,8 @@
     <div class="wrap">
         <div class="cta-block sr">
             <div>
-                <h2>他のおすすめ豆も<br>チェックしてみよう</h2>
-                <p>カフェヴェルディ以外にも、個性豊かなおすすめコーヒー豆を6種類ピックアップしています。</p>
+                <h2>他にも飲んでみた豆、<br>正直に書いています</h2>
+                <p>ヴェルディ以外にも、実際に取り寄せて飲んだコーヒー豆を6種類まとめています。失敗したくない人の参考に。</p>
             </div>
             <a href="recommend-beans.html" class="btn-fill">
                 おすすめ豆6選を見る
@@ -542,10 +551,10 @@
             <div class="footer-col">
                 <h4>このページ</h4>
                 <ul>
-                    <li><a href="#about">ブランド概要</a></li>
-                    <li><a href="#lineup">商品ラインナップ</a></li>
-                    <li><a href="#review">編集部レビュー</a></li>
-                    <li><a href="#buy">通販で購入</a></li>
+                    <li><a href="#intro">ブランド紹介</a></li>
+                    <li><a href="#review">豆レビュー</a></li>
+                    <li><a href="#recommend">おすすめの豆</a></li>
+                    <li><a href="#verdict">総評</a></li>
                 </ul>
             </div>
         </div>
